@@ -1,8 +1,8 @@
 import streamlit as st
 
 def main():
-    st.title('Halaman Depan dengan Gambar dari GitHub')
-    st.header('Selamat datang di Halaman Depan!')
+    st.title('INTEGRAL')
+    st.header('MARI BELAJAR INTEGRAL!')
 
     # URL raw dari gambar di repositori GitHub
     github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
