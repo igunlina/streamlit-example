@@ -14,14 +14,11 @@ def main():
     menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
 
     if menu == "Beranda":
-        st.write("Anda berada di Beranda.")
-        # Tambahkan konten Beranda di sini
+        st.write("Anda berada di Beranda. Ini adalah konten untuk halaman Beranda.")
     elif menu == "Tentang":
-        st.write("Anda berada di Halaman Tentang.")
-        # Tambahkan konten Tentang di sini
+        st.write("Anda berada di Halaman Tentang. Ini adalah konten untuk halaman Tentang.")
     elif menu == "Kontak":
-        st.write("Anda berada di Halaman Kontak.")
-        # Tambahkan konten Kontak di sini
+        st.write("Anda berada di Halaman Kontak. Ini adalah konten untuk halaman Kontak.")
 
 if __name__ == '__main__':
     main()
