@@ -12,7 +12,7 @@ def main():
 
     # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
     audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
-    st.audio(audio_file_path, format='audio/mp3', start_time=0)
+    st.audio(children-logo-116101.mp3, format='audio/mp3', start_time=0)
 
     # Menu di sidebar
     menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
