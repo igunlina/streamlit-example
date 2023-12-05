@@ -7,7 +7,7 @@ def main():
     # URL raw dari gambar di repositori GitHub
     github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
 
-    # Menampilkan gambar dari URL hanya di halaman Beranda
+    # Menu di sidebar
     menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
 
     if menu == "Beranda":
