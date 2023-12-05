@@ -10,9 +10,9 @@ def main():
     # Menampilkan gambar dari URL
     st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
-    # Menambahkan audio dari file lokal
-    audio_file = 'https://github.com/igunlina/streamlit-example/blob/master/children-logo-116101.mp3'  # Ganti dengan path file audio lokal Anda
-    st.audio(audio_file, format='audio/mp3', start_time=0)
+    # Menambahkan audio dari URL
+    audio_url = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'  # Ganti dengan URL audio Anda
+    st.audio(audio_url, format='audio/mp3', start_time=0)
 
     # Menu di sidebar
     menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
