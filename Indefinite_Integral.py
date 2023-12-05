@@ -1,17 +1,17 @@
 import streamlit as st
 
 def main():
-    st.title('BISMILLAH')
-    st.header('MARI BELAJAR INDEFINITE INTEGRAL')
-
-    # URL raw dari gambar di repositori GitHub
-    github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
-
     # Menu di sidebar
     menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
 
     if menu == "Beranda":
+        st.title('BISMILLAH')
+        st.header('MARI BELAJAR INDEFINITE INTEGRAL')
+
+        # URL raw dari gambar di repositori GitHub
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
+
         st.subheader("Selamat datang di halaman Beranda!")
         st.write("Halaman ini berisi informasi umum tentang pembelajaran Indefinite Integral.")
         st.write("Silakan jelajahi konten-konten yang tersedia.")
