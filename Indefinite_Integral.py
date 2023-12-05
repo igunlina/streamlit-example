@@ -11,7 +11,7 @@ def main():
     st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
     # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
-    audio_file_path = 'C:/Users/LINA/Downloads/children-logo-116101.mp3'  # Ganti dengan path file audio Anda
+    audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
     st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
     # Menu di sidebar
