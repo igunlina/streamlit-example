@@ -10,6 +10,10 @@ def main():
     # Menampilkan gambar dari URL
     st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
+    # Menambahkan audio dari file lokal
+    audio_file = 'path_ke_file_audio_anda.mp3'  # Ganti dengan path file audio lokal Anda
+    st.audio(audio_file, format='audio/mp3', start_time=0)
+
     # Menu di sidebar
     menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
 
