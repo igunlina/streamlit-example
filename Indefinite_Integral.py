@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title('INTEGRAL')
+    st.title('BISMILLAH')
     st.header('MARI BELAJAR INDEFINITE INTEGRAL')
 
     # URL raw dari gambar di repositori GitHub
@@ -11,7 +11,7 @@ def main():
     st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
     # Menu di sidebar
-    menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
+    menu = st.sidebar.radio("Menu", ["Definisi", "Review Turunan", "Rumus Dasar Integral", "Integra"l Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
 
     if menu == "Beranda":
         st.write("Anda berada di Beranda. Ini adalah konten untuk halaman Beranda.")
