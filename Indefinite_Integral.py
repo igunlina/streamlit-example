@@ -11,14 +11,23 @@ def main():
     st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
     # Menu di sidebar
-    menu = st.sidebar.radio("Menu", ["Definisi", "Review antiderivative", "Rumus Integral Dasar", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
+    menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
 
     if menu == "Beranda":
         st.write("Anda berada di Beranda. Ini adalah konten untuk halaman Beranda.")
+        # Tambahkan konten khusus untuk halaman Beranda di sini
+        st.subheader("Selamat datang di halaman Beranda!")
+        st.write("Silakan jelajahi informasi yang tersedia.")
     elif menu == "Tentang":
         st.write("Anda berada di Halaman Tentang. Ini adalah konten untuk halaman Tentang.")
+        # Tambahkan konten khusus untuk halaman Tentang di sini
+        st.subheader("Tentang Kami")
+        st.write("Kami adalah tim yang berkomitmen untuk memberikan informasi seputar integral.")
     elif menu == "Kontak":
         st.write("Anda berada di Halaman Kontak. Ini adalah konten untuk halaman Kontak.")
+        # Tambahkan konten khusus untuk halaman Kontak di sini
+        st.subheader("Hubungi Kami")
+        st.write("Jika Anda memiliki pertanyaan, silakan hubungi kami di example@email.com.")
 
 if __name__ == '__main__':
     main()
