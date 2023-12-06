@@ -80,7 +80,7 @@ def run_quiz():
 
 def check_answers(answer_1, answer_2):
     # Logika pengecekan jawaban dan memberikan umpan balik
-    correct_answers = {"Integral tak tentu": "Benar", "Fungsi primitif": "Benar"}
+    correct_answers = {"$F(x)=2x^2$": "Benar", "Fungsi primitif": "Benar"}
 
     if answer_1 in correct_answers and answer_2 in correct_answers:
         st.success("Jawaban Anda benar!")
