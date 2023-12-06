@@ -4,7 +4,7 @@ def main():
     # Menu di sidebar
     menu = st.sidebar.radio("INDEFINITE INTEGRAL", ["Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
 
-    if menu == "Definisi":
+    if menu == "INDEFINITE INTEGRAL":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL)')
 
