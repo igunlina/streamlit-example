@@ -26,7 +26,7 @@ def main():
         youtube_video_url_review = 'https://www.youtube.com/watch?v=XdiA9E5HC4I'  # Ganti dengan URL video YouTube Anda
         st.video(youtube_video_url_review)
 
-        st.write("Tentang Kami")
+        st.write("Sebelum mempelajari integral, mari kita review materi turunan agar mempelajari integral jadi lebih mudah")
         st.write("Kami adalah tim yang berkomitmen untuk memberikan informasi seputar integral.")
         st.write("Kami berharap informasi yang kami sajikan dapat membantu Anda memahami konsep ini dengan lebih baik.")
         st.write("Dalam video ini, kami membahas beberapa contoh turunan untuk membantu Anda memahami konsep ini secara praktis.")
