@@ -48,7 +48,15 @@ def main():
 
     elif menu == "Rumus Dasar Integral":
         st.subheader("Rumus Dasar Integral")
+        
+        # URL raw dari gambar di repositori GitHub
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
+        # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
+        audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
+        st.audio(audio_file_path, format='audio/mp3', start_time=0)
+        
         # Menuliskan persamaan matematika menggunakan Latex
         st.latex(r'''
             \int f(x) \,dx = F(x) + C
