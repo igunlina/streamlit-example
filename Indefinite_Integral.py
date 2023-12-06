@@ -17,8 +17,8 @@ def main():
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
         st.subheader("Definisi Integral Tak Tentu(Indefinite Integral /Primitive)!")
-        st.write("Misalkan I sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi f:I→R. Sebuah fungsi yang terdifferensialkan. F disebut sebagai primitive dari f pada interval I, jika
-F′(x)=f(x),  x∈I .")
+        st.latex(r"Misalkan $I$ sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi $f:I \to \mathbb{R}$. Sebuah fungsi yang terdifferensialkan $F$ disebut sebagai primitive dari $f$ pada interval $I$, jika $F'(x) = f(x), \, x \in I$.")
+
         st.write("Silakan jelajahi konten-konten yang tersedia.")
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
