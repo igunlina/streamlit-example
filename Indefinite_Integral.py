@@ -6,7 +6,7 @@ def main():
 
     if menu == "Definisi":
         st.title('BISMILLAH')
-        st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL)')
+        st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE)')
 
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
@@ -17,6 +17,7 @@ def main():
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
         st.subheader("Definisi Integral Tak Tentu(Indefinite Integral /Primitive)!")
+         st.write("(Indefinite Integral /Primitive)!")
         st.markdown(r"**Misalkan** $I$ **sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi** $f:I \to \mathbb{R}$. **Sebuah fungsi yang terdifferensialkan** $F$ **disebut sebagai primitive dari** $f$ **pada interval** $I$, **jika** $F'(x) = f(x)$, $x \in I$.")
 
 
