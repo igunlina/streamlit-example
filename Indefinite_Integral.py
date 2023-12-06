@@ -32,9 +32,23 @@ def main():
        
         st.write("Selamat menyimak!")
     elif menu == "Rumus Dasar Integral":
-        st.subheader("Tentang Kami")
-        st.write("Kami adalah tim yang berkomitmen untuk memberikan informasi seputar integral.")
-        st.write("Kami berharap informasi yang kami sajikan dapat membantu Anda memahami konsep ini dengan lebih baik.")
+        st.subheader("Rumus Dasar Integral")
+
+        # Menuliskan persamaan matematika menggunakan Latex
+        st.latex(r'''
+            \int f(x) \,dx = F(x) + C
+        ''')
+
+        st.write("Di sini, $f(x)$ adalah fungsi yang diintegrasikan, $F(x)$ adalah fungsi integral tak tentu, dan $C$ adalah konstanta integrasi.")
+        
+        st.write("Anda dapat menyesuaikan persamaan matematika tersebut sesuai dengan konteks dan rumus dasar yang ingin Anda sertakan.")
+        
+        # Menambahkan contoh persamaan matematika lainnya
+        st.latex(r'''
+            \int x^2 \,dx = \frac{1}{3}x^3 + C
+        ''')
+
+        st.write("Contoh lain, di sini $\int x^2 \,dx$ menghasilkan $\frac{1}{3}x^3 + C$ sebagai solusi integralnya.")
     elif menu == "Kontak":
         st.subheader("Hubungi Kami")
         st.write("Jika Anda memiliki pertanyaan atau masukan, silakan hubungi kami melalui:")
