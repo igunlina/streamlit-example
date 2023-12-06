@@ -25,8 +25,8 @@ def main():
 
         st.write("CONTOH 2.")
         st.markdown('<font color="red">**Fungsi** $f(x)=x^3$ **memiliki primitive** $F(x)=\\frac{x^4}{4}$ pada   $ \mathbb{R}$  **sehingga** $(\\frac{x^4}{4})\'=x^3$ </font>', unsafe_allow_html=True)
-        st.write("CONTOH 2.")
-        st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R} $   **sehingga** $(C'=0 $ </font>', unsafe_allow_html=True)
+        st.write("CONTOH 3.")
+        st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R} $   **sehingga** $(C)'=0$ </font>', unsafe_allow_html=True)
     
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
