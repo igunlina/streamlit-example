@@ -23,7 +23,7 @@ def main():
         st.subheader("Review Turunan")
 
         # Menambahkan video dari YouTube
-        youtube_video_url_review = 'https://www.youtube.com/watch?v=YOUR_REVIEW_VIDEO_ID'  # Ganti dengan URL video YouTube Anda
+        youtube_video_url_review = 'https://www.youtube.com/watch?v=XdiA9E5HC4I'  # Ganti dengan URL video YouTube Anda
         st.video(youtube_video_url_review)
 
         st.write("Tentang Kami")
