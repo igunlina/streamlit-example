@@ -16,8 +16,9 @@ def main():
         audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
-        st.subheader("Selamat datang di halaman Beranda!")
-        st.write("Halaman ini berisi informasi umum tentang pembelajaran Indefinite Integral.")
+        st.subheader("Definisi Integral Tak Tentu(Indefinite Integral /Primitive)!")
+        st.write("Misalkan I sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi f:I→R. Sebuah fungsi yang terdifferensialkan. F disebut sebagai primitive dari f pada interval I, jika
+F′(x)=f(x),  x∈I .")
         st.write("Silakan jelajahi konten-konten yang tersedia.")
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
