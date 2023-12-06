@@ -33,6 +33,38 @@ def main():
         if st.button("Kuis Definisi Integral"):
             run_quiz()
 
+    elif menu == "Review Turunan":
+        st.subheader("Review Turunan")
+
+        # Menambahkan video dari YouTube
+        youtube_video_url_review = 'https://www.youtube.com/watch?v=XdiA9E5HC4I'  # Ganti dengan URL video YouTube Anda
+        st.video(youtube_video_url_review)
+
+        st.write("Sebelum mempelajari integral, mari kita review materi turunan agar mempelajari integral jadi lebih mudah.")
+       
+        st.write("Silahkan simak video pembelajaran turunan di atas dengan baik")
+       
+        st.write("Selamat menyimak!")
+
+    elif menu == "Rumus Dasar Integral":
+        st.subheader("Rumus Dasar Integral")
+
+        # Menuliskan persamaan matematika menggunakan Latex
+        st.latex(r'''
+            \int f(x) \,dx = F(x) + C
+        ''')
+
+        st.write("Di sini, $f(x)$ adalah fungsi yang diintegrasikan, $F(x)$ adalah fungsi integral tak tentu, dan $C$ adalah konstanta integrasi.")
+        
+        st.write("Anda dapat menyesuaikan persamaan matematika tersebut sesuai dengan konteks dan rumus dasar yang ingin Anda sertakan.")
+        
+        # Menambahkan contoh persamaan matematika lainnya
+        st.latex(r'''
+            \int x^2 \,dx = \frac{1}{3}x^3 + C
+        ''')
+
+        st.write("Contoh lain, di sini $\\int x^2 \\,dx$ menghasilkan $1/3 x^3 + C$ sebagai solusi integralnya.")
+        
     # ... (Kode yang lain)
 
 def run_quiz():
@@ -54,8 +86,6 @@ def check_answers(answer_1, answer_2):
         st.success("Jawaban Anda benar!")
     else:
         st.error("Salah satu atau lebih jawaban Anda tidak benar. Coba lagi!")
-
-# ... (Kode yang lain)
 
 if __name__ == '__main__':
     main()
