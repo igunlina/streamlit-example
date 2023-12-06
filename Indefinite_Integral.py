@@ -69,7 +69,7 @@ def main():
 
 def run_quiz():
     # Pertanyaan 1
-    answer_1 = st.radio("Apa yang dimaksud dengan integral tak tentu?", ["Integral definit", "Integral tak tentu", "Integral ganda"])
+    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=4x$", ["$F(x)=2x^2$", "$F(x)=4x^2$", "$F(x)=4$"])
     
     # Pertanyaan 2
     answer_2 = st.radio("Apa yang menyatakan fungsi yang terdifferensialkan?", ["Fungsi primitif", "Fungsi turunan", "Fungsi integral"])
