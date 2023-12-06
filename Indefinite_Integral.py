@@ -4,7 +4,7 @@ def main():
     # Menu di sidebar
     menu = st.sidebar.radio("INDEFINITE INTEGRAL", ["Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
 
-    if menu == "INDEFINITE INTEGRAL":
+    if menu == "Definisi":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL)')
 
@@ -19,7 +19,7 @@ def main():
         st.subheader("Selamat datang di halaman Beranda!")
         st.write("Halaman ini berisi informasi umum tentang pembelajaran Indefinite Integral.")
         st.write("Silakan jelajahi konten-konten yang tersedia.")
-    elif menu == "Tentang":
+    elif menu == "Rumus Dasar Integral":
         st.subheader("Tentang Kami")
         st.write("Kami adalah tim yang berkomitmen untuk memberikan informasi seputar integral.")
         st.write("Kami berharap informasi yang kami sajikan dapat membantu Anda memahami konsep ini dengan lebih baik.")
