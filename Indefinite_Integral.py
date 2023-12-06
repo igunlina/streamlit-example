@@ -23,7 +23,9 @@ def main():
 
         st.write("CONTOH 1.")
         st.markdown(r"**Fungsi** $f(x)=2x$ **memiliki primitive** $F(x)=x^2$ pada   $ \mathbb{R}$  **sehingga** $(x^2)'=2x$ ")
-
+        
+        st.write("CONTOH 2.")
+        st.markdown(r"**Fungsi** $f(x)=x^3$ **memiliki primitive** $F(x)=\frac{x^4}{4}$ pada   $ \mathbb{R}$  **sehingga** $(\frac{x^4}{4})'=x^3$ ")
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
