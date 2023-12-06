@@ -73,18 +73,21 @@ def run_quiz():
     
     # Pertanyaan 2
     answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
-    
+
+     # Pertanyaan 3
+    answer_3 = st.radio("Tentukan primitive dari fungsi $f(x)=6$", ["$F(x)= 6x$", "$F(x)=0$", "$F(x)=3x^2$"])
+   
     # Tombol Submit
     submitted = st.button("Submit")
     
     if submitted:
-        check_answers(answer_1, answer_2)
+        check_answers(answer_1, answer_2, answer_3)
 
-def check_answers(answer_1, answer_2):
+def check_answers(answer_1, answer_2, answer_3):
     # Logika pengecekan jawaban dan memberikan umpan balik
-    correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar"}
+    correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)= 6x$": "Benar"}
 
-    if answer_1 in correct_answers and answer_2 in correct_answers:
+    if answer_1 in correct_answers and answer_2 in correct_answers and answer_3 in correct_answers :
         st.success("Selamat! Jawaban Anda benar.")
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
