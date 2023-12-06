@@ -2,11 +2,11 @@ import streamlit as st
 
 def main():
     # Menu di sidebar
-    menu = st.sidebar.radio("Menu", ["Beranda", "Tentang", "Kontak"])
+    menu = st.sidebar.radio("Menu", ["Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
 
     if menu == "Beranda":
         st.title('BISMILLAH')
-        st.header('MARI BELAJAR INDEFINITE INTEGRAL')
+        st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL)')
 
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
