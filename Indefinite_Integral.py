@@ -28,7 +28,7 @@ def main():
 
         st.write("Sebelum mempelajari integral, mari kita review materi turunan agar mempelajari integral jadi lebih mudah.")
        
-        st.write("Pastikan materi turunan sudah dikuasi.")
+        st.write("Silahkan simak video pembelajaran turunan di atas dengan baik,  pastikan materi turunan kalian kuasi.")
        
         st.write("Selamat menyimak!")
     elif menu == "Rumus Dasar Integral":
