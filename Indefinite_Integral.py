@@ -21,8 +21,8 @@ def main():
         st.markdown(r"**Misalkan** $I$ **sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi** $f:I \to \mathbb{R}$. **Sebuah fungsi yang terdifferensialkan** $F$ **disebut sebagai primitive dari** $f$ **pada interval** $I$, **jika** $F'(x) = f(x)$, $x \in I$.")
 
 
-        st.write("CONTOH.")
-        st.markdown(r"**Misalkan** $I$ **sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi** $f:I \to \mathbb{R}$. **Sebuah fungsi yang terdifferensialkan** $F$ **disebut sebagai primitive dari** $f$ **pada interval** $I$, **jika** $F'(x) = f(x)$, $x \in I$.")
+        st.write("CONTOH 1.")
+        st.markdown(r"**Fungsi** $f(x)=2x$ **memiliki primitive** $F(x)=x^2$ **pada **  $ \mathbb{R}$  **sehingga** $(x^2)'=2x$ ")
 
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
