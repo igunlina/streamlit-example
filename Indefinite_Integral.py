@@ -22,7 +22,7 @@ def main():
 
 
         st.write("CONTOH 1.")
-        st.markdown(r"**Fungsi** $f(x)=2x$ **memiliki primitive** $F(x)=x^2$ **pada **  $ \mathbb{R}$  **sehingga** $(x^2)'=2x$ ")
+        st.markdown(r"**Fungsi** $f(x)=2x$ **memiliki primitive** $F(x)=x^2$ pada   $ \mathbb{R}$  **sehingga** $(x^2)'=2x$ ")
 
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
