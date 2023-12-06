@@ -32,6 +32,7 @@ def main():
         # Tombol Kuis
         if st.button("Kuis Definisi Integral"):
             run_quiz()
+
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
