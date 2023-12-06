@@ -28,6 +28,31 @@ def main():
         
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R}$   **sehingga** $(C)\'=0$ </font>', unsafe_allow_html=True)
+
+         # ... (Kode yang lain)
+
+        st.subheader("Definisi Integral Tak Tentu")
+        st.markdown("(Indefinite Integral /Primitive)")
+        st.markdown(r"**Misalkan** $I$ **sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi** $f:I \to \mathbb{R}$. **Sebuah fungsi yang terdifferensialkan** $F$ **disebut sebagai primitive dari** $f$ **pada interval** $I$, **jika** $F'(x) = f(x)$, $x \in I$.")
+
+        # Pertanyaan 1
+        answer_1 = st.radio("Apa yang dimaksud dengan integral tak tentu?", ["Integral definit", "Integral tak tentu", "Integral ganda"])
+        
+        # Pertanyaan 2
+        answer_2 = st.radio("Apa yang menyatakan fungsi yang terdifferensialkan?", ["Fungsi primitif", "Fungsi turunan", "Fungsi integral"])
+        
+        # Tombol Submit
+        if st.button("Submit"):
+            check_answers(answer_1, answer_2)
+
+def check_answers(answer_1, answer_2):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"Integral tak tentu": "Benar", "Fungsi primitif": "Benar"}
+
+    if answer_1 in correct_answers and answer_2 in correct_answers:
+        st.success("Jawaban Anda benar!")
+    else:
+        st.error("Salah satu atau lebih jawaban Anda tidak benar. Coba lagi!")
     
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
