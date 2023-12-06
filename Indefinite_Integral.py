@@ -20,9 +20,18 @@ def main():
         st.write("Halaman ini berisi informasi umum tentang pembelajaran Indefinite Integral.")
         st.write("Silakan jelajahi konten-konten yang tersedia.")
     elif menu == "Review Turunan":
-        st.subheader("Tentang Kami")
+        st.subheader("Review Turunan")
+
+        # Menambahkan video dari YouTube
+        youtube_video_url_review = 'https://www.youtube.com/watch?v=YOUR_REVIEW_VIDEO_ID'  # Ganti dengan URL video YouTube Anda
+        st.video(youtube_video_url_review)
+
+        st.write("Tentang Kami")
         st.write("Kami adalah tim yang berkomitmen untuk memberikan informasi seputar integral.")
         st.write("Kami berharap informasi yang kami sajikan dapat membantu Anda memahami konsep ini dengan lebih baik.")
+        st.write("Dalam video ini, kami membahas beberapa contoh turunan untuk membantu Anda memahami konsep ini secara praktis.")
+
+        st.write("Selamat menonton!")
     elif menu == "Rumus Dasar Integral":
         st.subheader("Tentang Kami")
         st.write("Kami adalah tim yang berkomitmen untuk memberikan informasi seputar integral.")
