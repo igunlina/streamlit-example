@@ -48,7 +48,8 @@ def main():
             \int x^2 \,dx = \frac{1}{3}x^3 + C
         ''')
 
-       st.write("Contoh lain, di sini $\\int x^2 \\,dx$ menghasilkan $\\frac{1}{3}x^3 + C$ sebagai solusi integralnya.")
+        st.write("Contoh lain, di sini $\\int x^2 \\,dx$ menghasilkan $1/3 x^3 + C$ sebagai solusi integralnya.")
+
 
 
     elif menu == "Kontak":
