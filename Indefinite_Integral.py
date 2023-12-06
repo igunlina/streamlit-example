@@ -74,20 +74,18 @@ def run_quiz():
     # Pertanyaan 2
     answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
     
-    feedback_placeholder = st.empty()  # Placeholder untuk umpan balik
-
     # Tombol Submit
     if st.button("Submit"):
-        check_answers(answer_1, answer_2, feedback_placeholder)
+        check_answers(answer_1, answer_2)
 
-def check_answers(answer_1, answer_2, feedback_placeholder):
+def check_answers(answer_1, answer_2):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar"}
 
     if answer_1 in correct_answers and answer_2 in correct_answers:
-        feedback_placeholder.success("Selamat! Jawaban Anda benar.")
+        st.success("Selamat! Jawaban Anda benar.")
     else:
-        feedback_placeholder.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
 
 if __name__ == '__main__':
     main()
