@@ -75,7 +75,9 @@ def run_quiz():
     answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
     
     # Tombol Submit
-    if st.button("Submit"):
+    submitted = st.button("Submit")
+    
+    if submitted:
         check_answers(answer_1, answer_2)
 
 def check_answers(answer_1, answer_2):
