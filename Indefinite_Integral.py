@@ -85,9 +85,8 @@ def check_answers(answer_1, answer_2, feedback_placeholder):
     correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar"}
 
     if answer_1 in correct_answers and answer_2 in correct_answers:
-        feedback_placeholder.success("Jawaban Anda benar!")
+        feedback_placeholder.success("Selamat! Jawaban Anda benar.")
     else:
-        feedback_placeholder.error("Salah satu atau lebih jawaban Anda tidak benar. Coba lagi!")
-
+        feedback_placeholder.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
 if __name__ == '__main__':
     main()
