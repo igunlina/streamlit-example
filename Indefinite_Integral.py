@@ -72,7 +72,7 @@ def run_quiz():
     answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=4x$", ["$F(x)=2x^2$", "$F(x)=4x^2$", "$F(x)=4$"])
     
     # Pertanyaan 2
-    answer_2 = st.radio("Apa yang menyatakan fungsi yang terdifferensialkan?", ["Fungsi primitif", "Fungsi turunan", "Fungsi integral"])
+    answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\frac{1}{2} x^2$"])
     
     # Tombol Submit
     if st.button("Submit"):
