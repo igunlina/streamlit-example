@@ -76,17 +76,17 @@ def run_quiz():
     
     feedback_placeholder = st.empty()  # Placeholder untuk umpan balik
 
-    # Tombol Submit
-    if st.button("Submit"):
-        check_answers(answer_1, answer_2, feedback_placeholder)
+# Tombol Check Answers
+    if st.button("Check Answers"):
+        # Logika pengecekan jawaban dan memberikan umpan balik
+        correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar"}
 
-def check_answers(answer_1, answer_2, feedback_placeholder):
-    # Logika pengecekan jawaban dan memberikan umpan balik
-    correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar"}
+        if answer_1 in correct_answers and answer_2 in correct_answers:
+            feedback_status = "Selamat! Jawaban Anda benar."
+        else:
+            feedback_status = "Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali."
 
-    if answer_1 in correct_answers and answer_2 in correct_answers:
-        feedback_placeholder.success("Selamat! Jawaban Anda benar.")
-    else:
-        feedback_placeholder.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+    # Menampilkan umpan balik
+    st.write(feedback_status)
 if __name__ == '__main__':
     main()
