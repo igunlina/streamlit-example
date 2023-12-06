@@ -32,7 +32,25 @@ def main():
         # Tombol Kuis
         if st.button("Kuis Definisi Integral"):
             run_quiz()
+        def run_quiz():
+    # Pertanyaan 1
+    answer_1 = st.radio("Apa yang dimaksud dengan integral tak tentu?", ["Integral definit", "Integral tak tentu", "Integral ganda"])
+    
+    # Pertanyaan 2
+    answer_2 = st.radio("Apa yang menyatakan fungsi yang terdifferensialkan?", ["Fungsi primitif", "Fungsi turunan", "Fungsi integral"])
+    
+    # Tombol Submit
+    if st.button("Submit"):
+        check_answers(answer_1, answer_2)
 
+def check_answers(answer_1, answer_2):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"Integral tak tentu": "Benar", "Fungsi primitif": "Benar"}
+
+    if answer_1 in correct_answers and answer_2 in correct_answers:
+        st.success("Jawaban Anda benar!")
+    else:
+        st.error("Salah satu atau lebih jawaban Anda tidak benar. Coba lagi!")
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
