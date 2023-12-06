@@ -50,7 +50,7 @@ def main():
         st.subheader("Rumus Dasar Integral")
         
         # URL raw dari gambar di repositori GitHub
-        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
+        github_image_url = 'https://github.com/igunlina/streamlit-example/blob/master/rumus%20dasar%20integral.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
         # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
