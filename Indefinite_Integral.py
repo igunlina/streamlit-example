@@ -127,11 +127,16 @@ def main():
             &= x^6 - x^2 + C
             \end{align*}
         ''')
-        st.markdown('<font color="red"> $\int cos a \ da = sin a+C$ </font>', unsafe_allow_html=True)
-
-        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
-        st.markdown('<font color="red"> $\int -sin p \ dy = -ysin p+C$ </font>', unsafe_allow_html=True)
         
+        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.latex(r'''
+            \begin{align*}
+            \int \left(\frac{1}{t^3} - 2\sqrt{t} + 4t^3 - 1\right) \,dt 
+            &= \int \frac{1}{t^3} \,dt - 2\int t^{1/2} \,dt + 4\int t^3 \,dt - \int 1 \,dt \\
+            &= \frac{1}{(-2)t^2} - 2 \cdot \frac{2}{3} t^{3/2} + 4 \cdot \frac{1}{4} t^4 - t + C \\
+            &= -\frac{1}{2t^2} - \frac{4}{3} t\sqrt{t} + t^4 - t + C
+            \end{align*}
+        ''')
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.markdown('<font color="red"> $\int -sec^2h \ dh = -tanh+C$ </font>', unsafe_allow_html=True)
 
