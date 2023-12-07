@@ -49,7 +49,7 @@ def main():
         st.write("Selamat menyimak!")
 
     elif menu == "Rumus Dasar Integral":
-        st.subheader("Rumus Dasar Integral")
+        st.subheader("Indefinite Integral")
         
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/rumus%20dasar%20integral.jpg'
@@ -74,7 +74,15 @@ def main():
             \int x^n \,dx = \frac{1}{n+1}x^{n+1} + C
         ''')
 
-        st.write("Contoh lain, di sini $\\int x^2 \\,dx$ menghasilkan $1/3 x^3 + C$ sebagai solusi integralnya.")
+        st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red">**Fungsi** $\\int x dx=\frac {1}{1+1}x^{1+1}+C=\frac{1}{2}x^2+C$ **memiliki primitive** $F(x)=x^2$ pada   $ \mathbb{R}$  **sehingga** $(x^2)\'=2x$ </font>', unsafe_allow_html=True)
+
+        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red">**Fungsi** $f(x)=x^3$ **memiliki primitive** $F(x)=\\frac{x^4}{4}$ pada   $ \mathbb{R}$  **sehingga** $(\\frac{x^4}{4})\'=x^3$ </font>', unsafe_allow_html=True)
+        
+        st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R}$   **sehingga** $(C)\'=0$ </font>', unsafe_allow_html=True)
+
         
     # ... (Kode yang lain)
 
