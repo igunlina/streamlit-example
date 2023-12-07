@@ -2,7 +2,7 @@ import streamlit as st
 
 def main():
     # Menu di sidebar
-    menu = st.sidebar.radio("INDEFINITE INTEGRAL", ["Home", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
+    menu = st.sidebar.radio("Kalkulus", ["Indefinite Integral", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
 
     if menu == "Home":
         st.title('BISMILLAH')
