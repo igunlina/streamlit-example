@@ -1,5 +1,7 @@
 import streamlit as st
 
+import streamlit as st
+
 def main():
     # Menu di sidebar
     menu = st.sidebar.radio("Kalkulus", ["Indefinite Integral", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
@@ -15,8 +17,8 @@ def main():
         # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
         audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
 
-        # Memasukkan tag audio dengan atribut autoplay menggunakan JavaScript
-        st.write(f'<audio src="{audio_file_path}" type="audio/mp3" autoplay controls>', unsafe_allow_html=True)
+        # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
+        st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
     elif menu == "Definisi":
         st.subheader("Definisi Integral Tak Tentu")
