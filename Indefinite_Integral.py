@@ -88,7 +88,45 @@ def main():
         if st.button("Kuis Rumus Dasar Integral"):
             run_rumus_dasar_quiz()
 
+    elif menu == "Integral Trigonometri":
+        st.subheader("Integral Trigonometri")
 
+        # URL raw dari gambar di repositori GitHub
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/rumus%20dasar%20integral.jpg'
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
+
+        # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
+        audio_file_path = 'integral 2x.mp3'  # Ganti dengan path file audio Anda
+        st.audio(audio_file_path, format='audio/mp3', start_time=0)
+
+        # Menuliskan persamaan matematika menggunakan Latex
+        st.write("Bentuk umum indefinite integral atau integral tak tentu dapat dituliskan sebagai berikut.")
+        st.latex(r'''
+            \int f(x) \,dx = F(x) + C
+        ''')
+
+        st.write("Di sini, $f(x)$ adalah fungsi yang diintegralkan, $F(x)$ adalah fungsi integral tak tentu, dan $C$ adalah konstanta integrasi.")
+
+        st.markdown("**RUMUS DASAR INTEGRAL.**")
+        st.write("Jika $n$ sebarang bilangan rasional kecuali -1, maka.")
+        # Menambahkan contoh persamaan matematika lainnya
+        st.latex(r'''
+            \int x^n \,dx = \frac{1}{n+1}x^{n+1} + C
+        ''')
+
+        st.markdown("**CONTOH 1.**")
+        st.markdown("$\int x dx = \\frac{1}{1+1}x^{1+1}+C=\\frac{1}{2}x^2+C$")
+
+        st.markdown("**CONTOH 2.**")
+        st.markdown("$\int x^2 dx = \\frac{1}{2+1}x^{2+1}+C=\\frac{1}{3}x^3+C$")
+
+        st.markdown("**CONTOH 3.**")
+        st.markdown("$\int \sqrt{x} dx = \\frac{1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$")
+
+        # Tombol Kuis
+        if st.button("Kuis Integral Trigonometri"):
+            run_integral_trigonometri_quiz()
+            
 def run_definisi_quiz():
     # Pertanyaan 1
     answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
@@ -107,21 +145,36 @@ def run_definisi_quiz():
 
 
 def run_rumus_dasar_quiz():
-    # Pertanyaan 1
-    answer_1 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
+    # Pertanyaan 4
+    answer_4 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
 
-    # Pertanyaan 2
-    answer_2 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
+    # Pertanyaan 5
+    answer_5 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
 
-    # Pertanyaan 3
-    answer_3 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
+    # Pertanyaan 6
+    answer_6 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
 
     # Tombol Submit
     submitted = st.button("Submit")
 
     if submitted:
-        check_rumus_dasar_answers(answer_1, answer_2, answer_3)
+        check_rumus_dasar_answers(answer_4, answer_5, answer_6)
+        
+def run_integral_trigonometri_quiz():
+    # Pertanyaan 7
+    answer_7 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
 
+    # Pertanyaan 8
+    answer_8 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
+
+    # Pertanyaan 9
+    answer_9 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
+
+    # Tombol Submit
+    submitted = st.button("Submit")
+
+    if submitted:
+        check_rumus_dasar_answers(answer_7, answer_8, answer_9)
 
 def check_definisi_answers(answer_1, answer_2, answer_3):
     # Logika pengecekan jawaban dan memberikan umpan balik
@@ -133,15 +186,23 @@ def check_definisi_answers(answer_1, answer_2, answer_3):
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
 
 
-def check_rumus_dasar_answers(answer_1, answer_2, answer_3):
+def check_rumus_dasar_answers(answer_4, answer_5, answer_6):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$5a +C$": "Benar", "$\\frac{1}{4} m^4 +C$": "Benar", "$- \frac{1}{x} +C$": "Benar"}
 
-    if answer_1 in correct_answers and answer_2 in correct_answers and answer_3 in correct_answers:
+    if answer_4 in correct_answers and answer_5 in correct_answers and answer_6 in correct_answers:
         st.success("Selamat! Jawaban Anda benar.")
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
 
+def check_rumus_dasar_answers(answer_7, answer_8, answer_9):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"$5a +C$": "Benar", "$\\frac{1}{4} m^4 +C$": "Benar", "$- \frac{1}{x} +C$": "Benar"}
 
+    if answer_7 in correct_answers and answer_8 in correct_answers and answer_9 in correct_answers:
+        st.success("Selamat! Jawaban Anda benar.")
+    else:
+        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+        
 if __name__ == '__main__':
     main()
