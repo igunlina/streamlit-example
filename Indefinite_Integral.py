@@ -96,14 +96,14 @@ def main():
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Integral%20trigonometri.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
 
-        st.markdown("**CONTOH 1.**")
-        st.markdown("$\int x dx = \\frac{1}{1+1}x^{1+1}+C=\\frac{1}{2}x^2+C$")
+        st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int cos a da = sin a+C$ </font>', unsafe_allow_html=True)
 
-        st.markdown("**CONTOH 2.**")
-        st.markdown("$\int x^2 dx = \\frac{1}{2+1}x^{2+1}+C=\\frac{1}{3}x^3+C$")
-
-        st.markdown("**CONTOH 3.**")
-        st.markdown("$\int \sqrt{x} dx = \\frac{1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$")
+        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int -sin p dy = -ysin p+C$ </font>', unsafe_allow_html=True)
+        
+        st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int -sec^h dh = -tanh+C$ </font>', unsafe_allow_html=True)
 
         # Tombol Kuis
         if st.button("Kuis Integral Trigonometri"):
