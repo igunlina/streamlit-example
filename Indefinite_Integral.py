@@ -152,14 +152,14 @@ def main():
             \int (5a+1)(2-3a) \,da &= \int (10a - 15a^2 + 2 - 3a) \,da \\
             &= \int (-15a^2 + 7a + 2) \,da \\
             &= -15\int a^2 \,da + 7\int a \,da + 2\int 1 \,da \\
-            &= -15 \cdot \frac{1}{3}a^3 + 7 \cdot \frac{1}{2}a^2 + 2a + C \\
+            &= -15 \cdot \frac{1}{3}a^3 +C_1 + 7 \cdot \frac{1}{2}a^2 +C_2 + 2a + C_3 \\
             &= -5a^3 + \frac{7}{2}a^2 + 2a + C
             \end{align*}
 
          ''')
         # Tombol Kuis
-        if st.button("Kuis Integral Trigonometri"):
-            run_integral_trigonometri_quiz()
+        if st.button("Kuis Sifat Kelinieran Integral"):
+            run_sifat_kelinieran_quiz()
 
 def run_definisi_quiz():
     # Pertanyaan 1
@@ -211,6 +211,22 @@ def run_integral_trigonometri_quiz():
     if submitted:
         check_rumus_dasar_answers(answer_7, answer_8, answer_9)
 
+def run_sifat_kelinieran_quiz():
+    # Pertanyaan 10
+    answer_4 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
+
+    # Pertanyaan 11
+    answer_5 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
+
+    # Pertanyaan 12
+    answer_6 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
+
+    # Tombol Submit
+    submitted = st.button("Submit")
+
+    if submitted:
+        check_rumus_dasar_answers(answer_10, answer_11, answer_12)
+
 def check_definisi_answers(answer_1, answer_2, answer_3):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$F(x)=x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)=0$": "Benar"}
@@ -231,6 +247,15 @@ def check_rumus_dasar_answers(answer_4, answer_5, answer_6):
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
 
 def check_rumus_dasar_answers(answer_7, answer_8, answer_9):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
+
+    if answer_7 in correct_answers and answer_8 in correct_answers and answer_9 in correct_answers:
+        st.success("Selamat! Jawaban Anda benar.")
+    else:
+        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+        
+def check_rumus_dasar_answers(answer_10, answer_11, answer_12):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
 
