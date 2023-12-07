@@ -82,7 +82,7 @@ def main():
         st.markdown("$\int x^2 dx = \\frac{1}{2+1}x^{2+1}+C=\\frac{1}{3}x^3+C$")
 
         st.markdown("**CONTOH 3.**")
-        st.markdown("$\int \sqrt{x} dx = \\frac{1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$")
+        st.markdown("$\\int \sqrt{x} dx = \\frac{1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$")
 
         # Tombol Kuis
         if st.button("Kuis Rumus Dasar Integral"):
