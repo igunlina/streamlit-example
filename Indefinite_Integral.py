@@ -144,13 +144,13 @@ def run_rumus_dasar_quiz():
         
 def run_integral_trigonometri_quiz():
     # Pertanyaan 7
-    answer_7 = st.radio(" $\int_{}^{}{cos \phi } d \phi = $", ["$sin \phi + C$", "$- sin \phi + C$", "$- cos \phi + C $"])
+    answer_7 = st.radio(" $\int_{}^{}{cos \phi } \ d \phi = $", ["$sin \phi + C$", "$- sin \phi + C$", "$- cos \phi + C $"])
 
     # Pertanyaan 8
     answer_8 = st.radio(" $\int_{ }^{ }{-sec \ t \ tan  \ t} \ dt = $", ["$- sec t + C$", "$sec t + C$", "$ cosec  t + C$"])
     
     # Pertanyaan 9
-    answer_9 = st.radio(" $\int_{}^{}{sinx} dy=$", ["$ysinx+C$", "$siny+C $", "$xsiny+C$"])
+    answer_9 = st.radio(" $\int_{}^{}{sinx} \ dy=$", ["$ysinx+C$", "$siny+C $", "$xsiny+C$"])
 
    
     # Tombol Submit
