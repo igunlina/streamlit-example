@@ -108,7 +108,7 @@ def run_definisi_quiz():
 
 def run_rumus_dasar_quiz():
     # Pertanyaan 1
-    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=4x$", ["$F(x)=2x^2$", "$F(x)=4x^2$", "$F(x)=4$"])
+    answer_1 = st.radio(" $\( \int_{}^{}{5} da = \)$", ["$F(x)=2x^2$", "$F(x)=4x^2$", "$F(x)=4$"])
 
     # Pertanyaan 2
     answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
