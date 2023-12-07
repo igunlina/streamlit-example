@@ -95,7 +95,12 @@ def main():
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Integral%20trigonometri.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
+        
+        # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
+        audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
 
+        # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
+        st.audio(audio_file_path, format='audio/mp3', start_time=0)
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
         st.markdown('<font color="red"> $\int cos a \ da = sin a+C$ </font>', unsafe_allow_html=True)
 
@@ -116,7 +121,12 @@ def main():
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
+        
+        # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
+        audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
 
+        # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
+        st.audio(audio_file_path, format='audio/mp3', start_time=0)
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
         st.latex(r'''
             \begin{align*}
