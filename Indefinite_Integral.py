@@ -82,7 +82,9 @@ def main():
         
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.markdown('<font color="red"> $\int \sqrt{x} dx=\\frac {1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$ </font>', unsafe_allow_html=True)
-
+        # Tombol Kuis
+        if st.button("Kuis Rumus Dasar Integral"):
+            run_quiz()
         
     # ... (Kode yang lain)
 
