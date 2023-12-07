@@ -36,9 +36,9 @@ def main():
 
         # Tombol Kuis
         if st.button("Kuis Definisi Integral"):
-            run_quiz()
-        
-         
+            run_definisi_quiz()
+
+                
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
@@ -88,7 +88,9 @@ def main():
         st.markdown('<font color="red"> $\int \sqrt{x} dx=\\frac {1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$ </font>', unsafe_allow_html=True)
         # Tombol Kuis
         if st.button("Kuis Rumus Dasar Integral"):
-            run_quiz()
+            run_rumus_dasar_quiz()
+
+
         
     # ... (Kode yang lain)
 
@@ -106,16 +108,42 @@ def run_quiz():
     submitted = st.button("Submit")
     
     if submitted:
-        check_answers(answer_1, answer_2, answer_3)
+         check_definisi_answers(answer_1, answer_2, answer_3)
 
-def check_answers(answer_1, answer_2, answer_3):
+def run_rumus_dasar_quiz():
+    # Pertanyaan 1
+    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=4x$", ["$F(x)=2x^2$", "$F(x)=4x^2$", "$F(x)=4$"])
+    
+    # Pertanyaan 2
+    answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
+
+    # Pertanyaan 3
+    answer_3 = st.radio("Tentukan primitive dari fungsi $f(x)=6$", ["$F(x)= 6x$", "$F(x)=0$", "$F(x)=3x^2$"])
+   
+    # Tombol Submit
+    submitted = st.button("Submit")
+    
+    if submitted:
+        check_rumus_dasar_answers(answer_1, answer_2, answer_3)
+
+def check_definisi_answers(answer_1, answer_2, answer_3):
     # Logika pengecekan jawaban dan memberikan umpan balik
-    correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)= 6x$": "Benar"}
+    correct_answers = {"$F(x)=x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)=0$": "Benar"}
 
-    if answer_1 in correct_answers and answer_2 in correct_answers and answer_3 in correct_answers :
+    if answer_1 in correct_answers and answer_2 in correct_answers and answer_3 in correct_answers:
         st.success("Selamat! Jawaban Anda benar.")
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+
+def check_rumus_dasar_answers(answer_1, answer_2, answer_3):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"$F(x)=2x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)= 6x$": "Benar"}
+
+    if answer_1 in correct_answers and answer_2 in correct_answers and answer_3 in correct_answers:
+        st.success("Selamat! Jawaban Anda benar.")
+    else:
+        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+
 
 if __name__ == '__main__':
     main()
