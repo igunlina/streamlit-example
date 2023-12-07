@@ -34,22 +34,7 @@ def main():
         if st.button("Kuis Definisi Integral"):
             run_quiz()
         
-        # Menuliskan persamaan matematika menggunakan Latex
-        st.latex(r'''
-            \int f(x) \,dx = F(x) + C
-        ''')
-
-        st.write("Di sini, $f(x)$ adalah fungsi yang diintegrasikan, $F(x)$ adalah fungsi integral tak tentu, dan $C$ adalah konstanta integrasi.")
-        
-        st.write("Anda dapat menyesuaikan persamaan matematika tersebut sesuai dengan konteks dan rumus dasar yang ingin Anda sertakan.")
-        
-        # Menambahkan contoh persamaan matematika lainnya
-        st.latex(r'''
-            \int x^2 \,dx = \frac{1}{3}x^3 + C
-        ''')
-
-        st.write("Contoh lain, di sini $\\int x^2 \\,dx$ menghasilkan $1/3 x^3 + C$ sebagai solusi integralnya.")
-   
+         
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
@@ -75,17 +60,18 @@ def main():
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
         
         # Menuliskan persamaan matematika menggunakan Latex
+        st.write("Bentuk umum indefinite integral atau integral tak tentu dapat dituliskan sebagai berikut.")
         st.latex(r'''
             \int f(x) \,dx = F(x) + C
         ''')
 
-        st.write("Di sini, $f(x)$ adalah fungsi yang diintegrasikan, $F(x)$ adalah fungsi integral tak tentu, dan $C$ adalah konstanta integrasi.")
+        st.write("Di sini, $f(x)$ adalah fungsi yang diintegralkan, $F(x)$ adalah fungsi integral tak tentu, dan $C$ adalah konstanta integrasi.")
         
-        st.write("Anda dapat menyesuaikan persamaan matematika tersebut sesuai dengan konteks dan rumus dasar yang ingin Anda sertakan.")
-        
+        st.write("<font color='blue'>RUMUS DASAR INTEGRAL.</font>", unsafe_allow_html=True)
+        st.write("Jika 𝑛 sebarang bilangan rasional kecuali -1, maka.")
         # Menambahkan contoh persamaan matematika lainnya
         st.latex(r'''
-            \int x^2 \,dx = \frac{1}{3}x^3 + C
+            \int x^n \,dx = \frac{1}{n+1}x^{n+1} + C
         ''')
 
         st.write("Contoh lain, di sini $\\int x^2 \\,dx$ menghasilkan $1/3 x^3 + C$ sebagai solusi integralnya.")
