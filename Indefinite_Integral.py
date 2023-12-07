@@ -110,7 +110,7 @@ def main():
             run_integral_trigonometri_quiz()
            
     elif menu == "Sifat Kelinieran Integral":
-        st.subheader("Sifat Kelinieran Integral")
+        st.subheader()
 
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
