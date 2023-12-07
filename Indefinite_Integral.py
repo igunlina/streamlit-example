@@ -168,16 +168,16 @@ def main():
 
          ''')
 def main():
-       st.title('Kuis Sifat Kelinieran Integral')
+    st.title('Kuis Sifat Kelinieran Integral')
 
-       st.subheader('Pertanyaan 1:')
-       st.write("Apakah sifat kelinieran dari integral? Jawab dengan satu kata.")
+    st.subheader('Pertanyaan 1:')
+    st.write("Apakah sifat kelinieran dari integral? Jawab dengan satu kata.")
 
-       # Input jawaban untuk pertanyaan 1
-       answer_1 = st.text_input("Jawaban Pertanyaan 1:")
+    # Input jawaban untuk pertanyaan 1
+    answer_1 = st.text_input("Jawaban Pertanyaan 1:")
 
-       # Tombol Kuis
-       if st.button("Mulai Kuis"):
+    # Tombol Kuis
+    if st.button("Mulai Kuis"):
         run_linear_property_quiz(answer_1)
 
 def run_linear_property_quiz(answer_1):
@@ -189,6 +189,11 @@ def run_linear_property_quiz(answer_1):
         st.success("Selamat! Jawaban Anda benar.")
     else:
         st.error(f"Maaf, jawaban Anda salah. Jawaban yang benar adalah: {correct_answer_1}.")
+
+    # Tombol kembali ke halaman utama
+    if st.button("Kembali ke Halaman Utama"):
+        main()
+
 
 def run_definisi_quiz():
     # Pertanyaan 1
