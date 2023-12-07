@@ -138,8 +138,14 @@ def main():
             \end{align*}
         ''')
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
-        st.markdown('<font color="red"> $\int -sec^2h \ dh = -tanh+C$ </font>', unsafe_allow_html=True)
-
+        st.latex(r'''
+            \begin{align*}
+            \int (3y-4x)^2 \,dx &= \int (9y^2 - 2 \cdot 3y \cdot 4x + 16x^2) \,dx \\
+            &= 9y^2 \int 1 \,dx - 24y \int x \,dx + 16 \int x^2 \,dx \\
+            &= 9y^2x + C_1 - 12yx^2 + C_2 + \frac{16}{3}x^3 + C_3 \\
+            &= 9y^2x - 12yx^2 + \frac{16}{3}x^3 + C
+            \end{align*}
+         ''')
         # Tombol Kuis
         if st.button("Kuis Integral Trigonometri"):
             run_integral_trigonometri_quiz()
