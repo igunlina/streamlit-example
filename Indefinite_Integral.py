@@ -82,7 +82,7 @@ def main():
         st.markdown("$\int x^2 dx = \\frac{1}{2+1}x^{2+1}+C=\\frac{1}{3}x^3+C$")
 
         st.markdown("**CONTOH 3.**")
-        st.markdown("$\\int \sqrt{x} dx = \\frac{1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$")
+        st.markdown("$\int \sqrt{x} dx = \\frac{1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$")
 
         # Tombol Kuis
         if st.button("Kuis Rumus Dasar Integral"):
@@ -114,7 +114,7 @@ def run_rumus_dasar_quiz():
     answer_2 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
 
     # Pertanyaan 3
-    answer_3 = st.radio(" $\int_{}^{}{ \frac{1}{x^2} dx=}$", ["$- \frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
+    answer_3 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
 
     # Tombol Submit
     submitted = st.button("Submit")
