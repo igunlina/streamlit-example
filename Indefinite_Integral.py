@@ -2,9 +2,9 @@ import streamlit as st
 
 def main():
     # Menu di sidebar
-    menu = st.sidebar.radio("INDEFINITE INTEGRAL", ["Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
+    menu = st.sidebar.radio("INDEFINITE INTEGRAL", ["Home", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
 
-    if menu == "Definisi":
+    if menu == "Home":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE)')
 
@@ -16,6 +16,7 @@ def main():
         audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
+    elif menu == "Definisi":
         st.subheader("Definisi Integral Tak Tentu")
         st.markdown("(Indefinite Integral /Primitive)")
         st.markdown(r"**Misalkan** $I$ **sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi** $f:I \to \mathbb{R}$. **Sebuah fungsi yang terdifferensialkan** $F$ **disebut sebagai primitive dari** $f$ **pada interval** $I$, **jika** $F'(x) = f(x)$, $x \in I$.")
