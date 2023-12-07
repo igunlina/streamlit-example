@@ -180,7 +180,7 @@ def check_rumus_dasar_answers(answer_4, answer_5, answer_6):
 
 def check_rumus_dasar_answers(answer_7, answer_8, answer_9):
     # Logika pengecekan jawaban dan memberikan umpan balik
-    correct_answers = {"$5a +C$": "Benar", "$\\frac{1}{4} m^4 +C$": "Benar", "$- \frac{1}{x} +C$": "Benar"}
+    correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
 
     if answer_7 in correct_answers and answer_8 in correct_answers and answer_9 in correct_answers:
         st.success("Selamat! Jawaban Anda benar.")
