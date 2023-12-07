@@ -144,13 +144,13 @@ def run_rumus_dasar_quiz():
         
 def run_integral_trigonometri_quiz():
     # Pertanyaan 7
-    answer_7 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
+    answer_7 = st.radio(" $\int_{}^{}{cos \phi } d \phi = $", ["$sin \phi + C$", "$- sin \phi + C$", "$- cos \phi + C $"])
 
     # Pertanyaan 8
-    answer_8 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
+    answer_8 = st.radio(" $\int_{}^{}{-sec \alpha }\tan \alpha d \alpha=$", ["$-sec \alpha +C $", "$sec \alpha +C $", "$cosec \alpha +C$"])
 
     # Pertanyaan 9
-    answer_9 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
+    answer_9 = st.radio(" $\int_{}^{}{sinx} dy=}$", ["$ysinx+C$", "$siny+C $", "$xsiny+C$"])
 
     # Tombol Submit
     submitted = st.button("Submit")
