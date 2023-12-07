@@ -133,7 +133,7 @@ def main():
             \begin{align*}
             \int \left(\frac{1}{t^3} - 2\sqrt{t} + 4t^3 - 1\right) \,dt 
             &= \int \frac{1}{t^3} \,dt - 2\int t^{1/2} \,dt + 4\int t^3 \,dt - \int 1 \,dt \\
-            &= \frac{1}{(-2)t^2} - 2 \cdot \frac{2}{3} t^{3/2} + 4 \cdot \frac{1}{4} t^4 - t + C \\
+            &= \frac{1}{(-2)t^2}+C_1 - 2 \cdot \frac{2}{3} t^{3/2} +C_2 + 4 \cdot \frac{1}{4} t^4 - t + C_3 \\
             &= -\frac{1}{2t^2} - \frac{4}{3} t\sqrt{t} + t^4 - t + C
             \end{align*}
         ''')
@@ -145,6 +145,17 @@ def main():
             &= 9y^2x + C_1 - 12yx^2 + C_2 + \frac{16}{3}x^3 + C_3 \\
             &= 9y^2x - 12yx^2 + \frac{16}{3}x^3 + C
             \end{align*}
+         ''')
+        st.write("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
+        st.latex(r'''
+            \begin{align*}
+            \int (5a+1)(2-3a) \,da &= \int (10a - 15a^2 + 2 - 3a) \,da \\
+            &= \int (-15a^2 + 7a + 2) \,da \\
+            &= -15\int a^2 \,da + 7\int a \,da + 2\int 1 \,da \\
+            &= -15 \cdot \frac{1}{3}a^3 + 7 \cdot \frac{1}{2}a^2 + 2a + C \\
+            &= -5a^3 + \frac{7}{2}a^2 + 2a + C
+            \end{align*}
+
          ''')
         # Tombol Kuis
         if st.button("Kuis Integral Trigonometri"):
