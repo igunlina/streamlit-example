@@ -119,12 +119,13 @@ def main():
 
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
         st.latex(r'''
-            \int (6x^5 - 2x) \,dx = \int 6x^5 \,dx - \int 2x \,dx
-                                  = 6\int x^5 \,dx - 2\int x \,dx
-                                  = 6\left(\frac{1}{6} x^6 + C_1\right) - 2\left(\frac{1}{2} x^2 + C_2\right)
-                                  = x^6 + 6C_1 - x^2 - 2C_2
-                                  = x^6 - x^2 + C
-
+            \begin{align*}
+            \int (6x^5 - 2x) \,dx &= \int 6x^5 \,dx - \int 2x \,dx \\
+            &= 6\int x^5 \,dx - 2\int x \,dx \\
+            &= 6\left(\frac{1}{6} x^6 + C_1\right) - 2\left(\frac{1}{2} x^2 + C_2\right) \\
+            &= x^6 + 6C_1 - x^2 - 2C_2 \\
+            &= x^6 - x^2 + C
+            \end{align*}
         ''')
         st.markdown('<font color="red"> $\int cos a \ da = sin a+C$ </font>', unsafe_allow_html=True)
 
