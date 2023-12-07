@@ -23,14 +23,14 @@ def main():
         st.markdown("(Indefinite Integral /Primitive)")
         st.markdown(r"**Misalkan** $I$ **sebuah interval yang memuat lebih dari satu titik, dan sebarang fungsi** $f:I \to \mathbb{R}$. **Sebuah fungsi yang terdifferensialkan** $F$ **disebut sebagai primitive dari** $f$ **pada interval** $I$, **jika** $F'(x) = f(x)$, $x \in I$.")
 
-        st.markdown("**CONTOH 1.**")
-        st.markdown("**Fungsi** $f(x)=2x$ **memiliki primitive** $F(x)=x^2$ pada $ \mathbb{R}$ **sehingga** $(x^2)'=2x$")
+        st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red">**Fungsi** $f(x)=2x$ **memiliki primitive** $F(x)=x^2$ pada   $ \mathbb{R}$  **sehingga** $(x^2)\'=2x$ </font>', unsafe_allow_html=True)
 
-        st.markdown("**CONTOH 2.**")
-        st.markdown("**Fungsi** $f(x)=x^3$ **memiliki primitive** $F(x)=\\frac{x^4}{4}$ pada $ \mathbb{R}$ **sehingga** $(\\frac{x^4}{4})' = x^3$")
-
-        st.markdown("**CONTOH 3.**")
-        st.markdown("**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R}$ **sehingga** $(C)'=0$")
+        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red">**Fungsi** $f(x)=x^3$ **memiliki primitive** $F(x)=\\frac{x^4}{4}$ pada   $ \mathbb{R}$  **sehingga** $(\\frac{x^4}{4})\'=x^3$ </font>', unsafe_allow_html=True)
+        
+        st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R}$   **sehingga** $(C)\'=0$ </font>', unsafe_allow_html=True)
 
         # Tombol Kuis
         if st.button("Kuis Definisi Integral"):
