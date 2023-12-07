@@ -92,27 +92,8 @@ def main():
         st.subheader("Integral Trigonometri")
 
         # URL raw dari gambar di repositori GitHub
-        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/rumus%20dasar%20integral.jpg'
-        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
-
-        # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
-        audio_file_path = 'integral 2x.mp3'  # Ganti dengan path file audio Anda
-        st.audio(audio_file_path, format='audio/mp3', start_time=0)
-
-        # Menuliskan persamaan matematika menggunakan Latex
-        st.write("Bentuk umum indefinite integral atau integral tak tentu dapat dituliskan sebagai berikut.")
-        st.latex(r'''
-            \int f(x) \,dx = F(x) + C
-        ''')
-
-        st.write("Di sini, $f(x)$ adalah fungsi yang diintegralkan, $F(x)$ adalah fungsi integral tak tentu, dan $C$ adalah konstanta integrasi.")
-
-        st.markdown("**RUMUS DASAR INTEGRAL.**")
-        st.write("Jika $n$ sebarang bilangan rasional kecuali -1, maka.")
-        # Menambahkan contoh persamaan matematika lainnya
-        st.latex(r'''
-            \int x^n \,dx = \frac{1}{n+1}x^{n+1} + C
-        ''')
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Integral%20trigonometri.jpg'
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
 
         st.markdown("**CONTOH 1.**")
         st.markdown("$\int x dx = \\frac{1}{1+1}x^{1+1}+C=\\frac{1}{2}x^2+C$")
