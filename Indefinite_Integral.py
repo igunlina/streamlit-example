@@ -14,7 +14,9 @@ def main():
 
         # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
         audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
-        st.audio(audio_file_path, format='audio/mp3', start_time=0)
+
+        # Memasukkan tag audio dengan atribut autoplay menggunakan JavaScript
+        st.write(f'<audio src="{audio_file_path}" type="audio/mp3" autoplay controls>', unsafe_allow_html=True)
 
     elif menu == "Definisi":
         st.subheader("Definisi Integral Tak Tentu")
