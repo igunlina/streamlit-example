@@ -75,7 +75,7 @@ def main():
         ''')
 
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
-        st.markdown('<font color="red">**Fungsi** $\\int x dx=\frac {1}{1+1}x^{1+1}+C=\frac{1}{2}x^2+C$ **memiliki primitive** $F(x)=x^2$ pada   $ \mathbb{R}$  **sehingga** $(x^2)\'=2x$ </font>', unsafe_allow_html=True)
+        st.markdown('<font color="red">**Fungsi** $\int x dx=\\frac {1}{1+1}x^{1+1}+C=\\frac{1}{2}x^2+C$ **memiliki primitive** $F(x)=x^2$ pada   $ \mathbb{R}$  **sehingga** $(x^2)\'=2x$ </font>', unsafe_allow_html=True)
 
         st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
         st.markdown('<font color="red">**Fungsi** $f(x)=x^3$ **memiliki primitive** $F(x)=\\frac{x^4}{4}$ pada   $ \mathbb{R}$  **sehingga** $(\\frac{x^4}{4})\'=x^3$ </font>', unsafe_allow_html=True)
