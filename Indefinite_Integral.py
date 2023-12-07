@@ -109,6 +109,7 @@ def main():
         if st.button("Kuis Integral Trigonometri"):
             run_integral_trigonometri_quiz()
            
+   
     elif menu == "Sifat Kelinieran Integral":
         
 
@@ -118,7 +119,12 @@ def main():
 
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
         st.latex(r'''
-            \int x^n \,dx = \frac{1}{n+1}x^{n+1} + C
+            \int (6x^5 - 2x) \,dx = \int 6x^5 \,dx - \int 2x \,dx
+                                  = 6\int x^5 \,dx - 2\int x \,dx
+                                  = 6\left(\frac{1}{6} x^6 + C_1\right) - 2\left(\frac{1}{2} x^2 + C_2\right)
+                                  = x^6 + 6C_1 - x^2 - 2C_2
+                                  = x^6 - x^2 + C
+
         ''')
         st.markdown('<font color="red"> $\int cos a \ da = sin a+C$ </font>', unsafe_allow_html=True)
 
