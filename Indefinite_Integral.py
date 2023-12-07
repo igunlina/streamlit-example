@@ -147,7 +147,7 @@ def run_integral_trigonometri_quiz():
     answer_7 = st.radio(" $\int_{}^{}{cos \phi } d \phi = $", ["$sin \phi + C$", "$- sin \phi + C$", "$- cos \phi + C $"])
 
     # Pertanyaan 8
-    answer_8 = st.radio(" $\int_{\ }^{ \ }{-\sec \alpha \tan \alpha \, d \alpha}=$", ["$-\sec \alpha + C$", "$\sec \alpha + C$", "$\cosec \alpha + C$"], format="html")
+    answer_8 = st.radio(" $\int_{\ }^{ \ }{-\sec \alpha \tan \alpha \, d \alpha}=$", ["$-\sec \alpha + C$", "$\sec \alpha + C$", "$\cosec \alpha + C$"])
 
     # Pertanyaan 9
     answer_9 = st.radio(" $\int_{}^{}{sinx} dy=$", ["$ysinx+C$", "$siny+C $", "$xsiny+C$"])
