@@ -55,7 +55,7 @@ def main():
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
         # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
-        audio_file_path = 'https://github.com/igunlina/streamlit-example/blob/master/integral%202x.mp3'  # Ganti dengan path file audio Anda
+        audio_file_path = 'integral 2x.mp3'  # Ganti dengan path file audio Anda
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
         
         # Menuliskan persamaan matematika menggunakan Latex
