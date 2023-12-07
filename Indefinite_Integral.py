@@ -81,7 +81,7 @@ def main():
         st.markdown('<font color="red"> $\int x^2 dx=\\frac {1}{2+1}x^{2+1}+C=\\frac{1}{3}x^3+C$ </font>', unsafe_allow_html=True)
         
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
-       st.markdown('<font color="red"> $\int \sqr x dx=\\frac {1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$ </font>', unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int \sqr x dx=\\frac {1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$ </font>', unsafe_allow_html=True)
 
         
     # ... (Kode yang lain)
