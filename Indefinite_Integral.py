@@ -6,7 +6,7 @@ def main():
 
     if menu == "Indefinite Integral":
         st.title('BISMILLAH')
-        st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE)')
+        st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
 
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Indefinite.jpg'
@@ -108,7 +108,27 @@ def main():
         # Tombol Kuis
         if st.button("Kuis Integral Trigonometri"):
             run_integral_trigonometri_quiz()
-            
+           
+    elif menu == "Sifat Kelinieran Integral":
+        st.subheader("Sifat Kelinieran Integral")
+
+        # URL raw dari gambar di repositori GitHub
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
+
+        st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int cos a \ da = sin a+C$ </font>', unsafe_allow_html=True)
+
+        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int -sin p \ dy = -ysin p+C$ </font>', unsafe_allow_html=True)
+        
+        st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int -sec^2h \ dh = -tanh+C$ </font>', unsafe_allow_html=True)
+
+        # Tombol Kuis
+        if st.button("Kuis Integral Trigonometri"):
+            run_integral_trigonometri_quiz()
+
 def run_definisi_quiz():
     # Pertanyaan 1
     answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
