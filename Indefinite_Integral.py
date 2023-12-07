@@ -78,10 +78,10 @@ def main():
         st.markdown('<font color="red"> $\int x dx=\\frac {1}{1+1}x^{1+1}+C=\\frac{1}{2}x^2+C$ </font>', unsafe_allow_html=True)
 
         st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
-        st.markdown('<font color="red">**Fungsi** $f(x)=x^3$ **memiliki primitive** $F(x)=\\frac{x^4}{4}$ pada   $ \mathbb{R}$  **sehingga** $(\\frac{x^4}{4})\'=x^3$ </font>', unsafe_allow_html=True)
+        st.markdown('<font color="red"> $\int x^2 dx=\\frac {1}{2+1}x^{2+1}+C=\\frac{1}{3}x^3+C$ </font>', unsafe_allow_html=True)
         
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
-        st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R}$   **sehingga** $(C)\'=0$ </font>', unsafe_allow_html=True)
+       st.markdown('<font color="red"> $\int \sqr x dx=\\frac {1}{\\frac{1}{2}+1}x^{\\frac{1}{2}+1}+C=\\frac{2}{3}x^{\\frac{3}{2}}+C$ </font>', unsafe_allow_html=True)
 
         
     # ... (Kode yang lain)
