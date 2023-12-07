@@ -97,6 +97,9 @@ def main():
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
 
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.latex(r'''
+            \int x^n \,dx = \frac{1}{n+1}x^{n+1} + C
+        ''')
         st.markdown('<font color="red"> $\int cos a \ da = sin a+C$ </font>', unsafe_allow_html=True)
 
         st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
