@@ -183,6 +183,7 @@ def main():
         # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
         st.latex(r'''
             \int (2x^3-4x)^{24} (3x^2-2) \,dx          
         ''')
