@@ -7,7 +7,37 @@ def main():
     if menu == "latihan":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
+    # Tombol Kuis
+        if st.button("latihanl"):
+            run_rumus_dasar_quiz()
+    def run_latihan_quiz():
+    # Pertanyaan 1
+    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
+ 
+    # Tombol Submit
+    submitted = st.button("Submit")
 
+    if submitted:
+        check_definisi_answers(answer_1)
+
+def check_definisi_answers(answer_1):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"$F(x)=x^2$": "Benar"}
+
+    if answer_1 in correct_answers :
+        st.success("Selamat! Jawaban Anda benar.")
+    else:
+        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+
+
+
+
+
+
+
+
+
+    
     if menu == "Indefinite Integral":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
