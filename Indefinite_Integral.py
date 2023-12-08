@@ -215,6 +215,7 @@ def main():
             ''')
         
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
         st.latex(r'''
             \begin{align*}
             \int (3y-4x)^2 \,dx &= \int (9y^2 - 2 \cdot 3y \cdot 4x + 16x^2) \,dx \\
