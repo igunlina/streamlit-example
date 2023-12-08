@@ -246,36 +246,9 @@ def main():
             &= \frac{x}{6} (3x+2)^4 - \frac{1}{90} (3x+2)^4 + C
             \end{align*}
         
-        st.markdown("<font color='blue'>CONTOH 5.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int -3 cos^6(x) \ sin(x) \,dx
-            ''')
-        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $g(x)=cosx$ maka $g' (x)=-sinx$. Sehingga,")
-        st.latex(r''' 
-            \begin{align*}
-            \int (2x^3-4x)^{24} (6x^2-4) \,dx &= \int [g(x)]^{24} \cdot g'(x) \,dx \\
-            &= \frac{1}{25} [g(x)]^{25} + C \\
-            &= \frac{1}{25} (2x^3-4x)^{25} + C
-            \end{align*}
-            ''')
+        
                 
-        st.markdown("<font color='blue'>CONTOH 6.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx
-            ''')
-        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $u=x^2+6x$ maka $du=(2x+6)dx$  atau  $\\frac{du}{2}=(x+3)dx$. Sehingga,")
-        st.latex(r''' 
-            \begin{align*}
-            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx &= \int \frac{1}{\sqrt{u}} \frac{du}{2} \\
-            &= \int [u]^{-1/2} \frac{du}{2} \\
-            &= \frac{1}{2} \cdot 2 \cdot [u]^{1/2} + C \\
-            &= \sqrt{x^2+6x} + C
-            \end{align*}
-            ''')
+        
 
 
 
