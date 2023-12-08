@@ -322,13 +322,13 @@ def run_sifat_kelinieran_quiz():
 
 def run_teknik_integrasi_quiz():
     # Pertanyaan 13
-    answer_4 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
+    answer_13 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
 
     # Pertanyaan 14
-    answer_5 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
+    answer_14 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
 
     # Pertanyaan 15
-    answer_6 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
+    answer_15 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
 
     # Tombol Submit
     submitted = st.button("Submit")
