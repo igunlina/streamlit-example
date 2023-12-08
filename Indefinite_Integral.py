@@ -183,7 +183,7 @@ def main():
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
         st.markdown("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
-        st.markdown("<font color='red'>Hitunglah!.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
         st.latex(r'''
             \int (2x^3-4x)^{24} (3x^2-2) \,dx
             ''')
