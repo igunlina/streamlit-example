@@ -320,6 +320,22 @@ def run_sifat_kelinieran_quiz():
     if submitted:
         check_rumus_dasar_answers(answer_10, answer_11, answer_12)
 
+def run_teknik_integrasi_quiz():
+    # Pertanyaan 13
+    answer_4 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
+
+    # Pertanyaan 14
+    answer_5 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
+
+    # Pertanyaan 15
+    answer_6 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
+
+    # Tombol Submit
+    submitted = st.button("Submit")
+
+    if submitted:
+        check_teknik_integrasi_answers(answer_13, answer_14, answer_15)
+
 def check_definisi_answers(answer_1, answer_2, answer_3):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$F(x)=x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)=0$": "Benar"}
