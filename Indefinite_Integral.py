@@ -232,19 +232,7 @@ def main():
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/parsial.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
         
-        st.markdown("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int 2x(3x+2)^3 \,dx
-            ''')
-        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $u=2x$, maka $du=2dx$ atau $dv = (3x+2)^3 \,dx$  Sehingga, $v = \frac{1}{3 \cdot 4} (3x+2)^4 = \frac{1}{12} (3x+2)^4$. Akibatnya, ")
-        st.latex(r''' 
-            \begin{align*}
-            \int 2x(3x+2)^3 \,dx &= 2x \cdot \frac{1}{12} (3x+2)^4 - \int \frac{1}{12} (3x+2)^4 \cdot 2 \,dx \\
-            &= \frac{x}{6} (3x+2)^4 - \frac{1}{6} \cdot \frac{1}{3} \cdot \frac{1}{5} (3x+2)^4 + C \\
-            &= \frac{x}{6} (3x+2)^4 - \frac{1}{90} (3x+2)^4 + C
-            \end{align*}
+        
         
         
                 
