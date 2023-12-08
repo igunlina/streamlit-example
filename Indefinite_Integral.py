@@ -172,22 +172,26 @@ def main():
             run_sifat_kelinieran_quiz()
     
     elif menu == "Teknik Integrasi":
-       
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/SUBSTITUSI.jpg'
-        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
-        
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
+
         # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
         audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
 
         # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
-        st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+
+        st.markdown("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
         st.write("Hitunglah!")
         st.latex(r'''
-            \int (2x^3-4x)^{24} (3x^2-2) \,dx          
-        ''')
-        
+            \int (2x^3-4x)^{24} (3x^2-2) \,dx
+            ''')
+        st.write("Jawab:")
+        st.markdown(r'''
+            Misalkan \(u=2x^3-4x\), maka \(du=(6x^2-4)dx\) atau \(\frac{du}{2}=(3x^2-2)dx\). Sehingga,
+            ''')
+
         st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
         st.latex(r'''
             \begin{align*}
