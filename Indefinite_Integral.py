@@ -198,21 +198,21 @@ def main():
         \end{align*}
         ''')
         
-        sst.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
         st.write("Hitunglah!")
         st.latex(r'''
-            \int -3 cos^6(x) sin(x) \,dx
+            \int -3 cos^6(x) sin(x) \ dx
         ''')
         st.write("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $g(x)=cosx$ maka $g' (x)=-sinx$, sehingga,")
+        st.write("Misalkan $g(x)=cosx$ maka $g' (x)=-sinx$, sehingga")
         st.latex(r'''
-        \begin{align*}
-        \int -3cos^6(x) \ sin(x) \,dx &= 3 \int \cos^6(x)(-\sin(x)) \,dx \\
-        &= 3\int [g(x)]^6g'(x) \,dx \\
-        &= 3 \cdot \frac{1}{7}[g(x)]^7 + C \\
-        &= \frac{3}{7}\cos^7(x) + C
-        \end{align*}
-        ''')
+            \begin{align*}
+            \int -3cos^6(x) \ sin(x) \,dx &= 3 \int \cos^6(x)(-\sin(x)) \,dx \\
+            &= 3\int [g(x)]^6g'(x) \,dx \\
+            &= 3 \cdot \frac{1}{7}[g(x)]^7 + C \\
+            &= \frac{3}{7}\cos^7(x) + C
+            \end{align*}
+            ''')
         
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.latex(r'''
