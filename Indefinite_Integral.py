@@ -35,10 +35,7 @@ def main():
         # Tombol Kuis
         if st.button("Kuis Definisi Integral"):
             run_definisi_quiz()
- if menu == "latihan":
-        st.title('BISMILLAH')
-        st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
-        
+              
         # Pertanyaan 1
         answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"]) 
         # Pertanyaan 2
