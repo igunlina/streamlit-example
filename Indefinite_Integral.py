@@ -235,52 +235,21 @@ def main():
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/parsial.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
 
-        st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.write("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
         st.write("Hitunglah!")
         st.latex(r'''
-            \int (2x^3-4x)^{24} (3x^2-2) \,dx
+           \int 2x(3x+2)^3 \,dx
         ''')
         st.write("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $u=2x^3-4x$ maka $du=(6x^2-4)dx$ atau $\\frac{du}{2}=(3x^2-2)dx$, sehingga,")
+        st.write("Misalkan $u=2x$ maka $du=2dx$ dan $dv=(3x+2)^3 dx$   ,sehingga $v = \\frac{1}{3 \cdot 4} (3x+2)^4 = \\frac{1}{12} (3x+2)^4$. Akibatnya")
         st.latex(r'''
         \begin{align*}
-        \int (2x^3-4x)^{24} (3x^2-2) \,dx &= \int [u]^{24} \frac{du}{2} \\
-        &= \frac{1}{2 \cdot 25} [u]^{25} + C \\
-        &= \frac{1}{50} (2x^3-4x)^{25} + C
+        \int 2x(3x+2)^3 \,dx &= 2x \cdot \frac{1}{12} (3x+2)^4 - \int \frac{1}{12} (3x+2)^4 \cdot 2 \,dx \\
+        &= \frac{x}{6} (3x+2)^4 - \frac{1}{6} \cdot \frac{1}{3} \cdot \frac{1}{5} (3x+2)^4 + C \\
+        &= \frac{x}{6} (3x+2)^4 - \frac{1}{90} (3x+2)^4 + C
         \end{align*}
         ''')
-        
-        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int -3 cos^6(x) sin(x) \ dx
-        ''')
-        st.write("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $g(x)=cosx$ maka $g' (x)=-sinx$, sehingga")
-        st.latex(r'''
-            \begin{align*}
-            \int -3cos^6(x) \ sin(x) \,dx &= 3 \int \cos^6(x)(-\sin(x)) \,dx \\
-            &= 3\int [g(x)]^6g'(x) \,dx \\
-            &= 3 \cdot \frac{1}{7}[g(x)]^7 + C \\
-            &= \frac{3}{7}\cos^7(x) + C
-            \end{align*}
-            ''')
-        
-        st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx
-         ''')
-
-        st.write("Misalkan $u=x^2+6x $ maka $du=(2x+6)dx$, atau  $ \\frac{du}{2}=(x+3)dx$, sehingga")
-        st.latex(r'''
-            \begin{align*}
-            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx &= \int \frac{1}{\sqrt{u}} \frac{du}{2} \\
-            &= \int [u]^{-1/2} \frac{du}{2} \\
-            &= \frac{1}{2} \cdot 2 \cdot [u]^{1/2} + C \\
-            &= \sqrt{x^2+6x} + C
-            \end{align*}
-            ''')
+                
         # Tombol Kuis
         if st.button("Teknik Integrasi"):
             run_teknik_Integrasi_quiz()
