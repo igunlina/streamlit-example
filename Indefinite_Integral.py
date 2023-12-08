@@ -183,11 +183,11 @@ def main():
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
 
         st.markdown("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
+        st.markdown("<font color='red'>Hitunglah!.</font>", unsafe_allow_html=True)
         st.latex(r'''
             \int (2x^3-4x)^{24} (3x^2-2) \,dx
             ''')
-        st.write("Jawab:")
+        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
         st.write("Misalkan $u=2x^3-4x$, maka $du=(6x^2-4)dx$ atau $\\frac{du}{2}=(3x^2-2)dx$. Sehingga,")
         st.latex(r''' 
             \begin{align*}
