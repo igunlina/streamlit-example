@@ -172,7 +172,7 @@ def main():
         if st.button("Kuis Sifat Kelinieran Integral"):
             run_sifat_kelinieran_quiz()
 
-     elif menu == "Teknik Integrasi":
+    elif menu == "Teknik Integrasi":
         
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
