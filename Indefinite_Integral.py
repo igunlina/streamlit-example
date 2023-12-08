@@ -364,14 +364,23 @@ def check_rumus_dasar_answers(answer_7, answer_8, answer_9):
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
         
-def check_rumus_dasar_answers(answer_10, answer_11, answer_12):
+def check_sifat_kelinieran_answers(answer_10, answer_11, answer_12):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
 
-    if answer_7 in correct_answers and answer_8 in correct_answers and answer_9 in correct_answers:
+    if answer_10 in correct_answers and answer_11 in correct_answers and answer_12 in correct_answers:
         st.success("Selamat! Jawaban Anda benar.")
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
-        
+
+def check_teknik_integrasi_answers(answer_13 answer_14, answer_15):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
+
+    if answer_13 in correct_answers and answer_14 in correct_answers and answer_15 in correct_answers:
+        st.success("Selamat! Jawaban Anda benar.")
+    else:
+        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+
 if __name__ == '__main__':
     main()
