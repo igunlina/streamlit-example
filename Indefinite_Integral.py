@@ -11,7 +11,7 @@ def main():
         # Tombol Kuis
         if st.button("latihan"):
             check_latihan_answers(answer_1)
-            run_latihan_quiz()
+            #run_latihan_quiz()
 
 def run_latihan_quiz():
     # Pertanyaan 1
