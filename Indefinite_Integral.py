@@ -18,7 +18,9 @@ def run_latihan_quiz():
  
     # Tombol Submit
     submitted = st.button("Submit")
-
+    if st.button("submit"):
+        
+        st.title('lewat sini')
     if submitted:
         st.title('lewat sini')
         check_latihan_answers(answer_1)
