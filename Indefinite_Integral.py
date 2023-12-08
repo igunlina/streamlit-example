@@ -266,7 +266,7 @@ def check_rumus_dasar_answers(answer_7, answer_8, answer_9):
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
         
-def check_rumus_dasar_answers(answer_10, answer_11, answer_12):
+def check_integral_trigonometri_answers(answer_10, answer_11, answer_12):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
 
