@@ -20,6 +20,7 @@ def run_latihan_quiz():
     submitted = st.button("Submit")
 
     if submitted:
+        st.title('lewat sini')
         check_latihan_answers(answer_1)
 
 def check_latihan_answers(answer_1):
