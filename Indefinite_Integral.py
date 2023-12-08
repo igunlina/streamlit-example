@@ -4,45 +4,7 @@ def main():
     # Menu di sidebar
     menu = st.sidebar.radio("INTEGRAL", ["Indefinite Integral", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi", "latihan"])
    
-    if menu == "latihan":
-        st.title('BISMILLAH')
-        st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
-        
-        answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"]) 
-        # Tombol Kuis
-        if st.button("submit"):
-            check_latihan_answers(answer_1)
-            #run_latihan_quiz()
-
-def run_latihan_quiz():
-    # Pertanyaan 1
-    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
- 
-    # Tombol Submit
-    submitted = st.button("Submit")
-    if st.button("submit"):
-        check_latihan_answers(answer_1)
-        st.title('lewat sini')
-    if submitted:
-        st.title('lewat sini')
-        check_latihan_answers(answer_1)
-
-def check_latihan_answers(answer_1):
-    # Logika pengecekan jawaban dan memberikan umpan balik
-    correct_answers = {"$F(x)=x^2$": "Benar"}
-
-    if answer_1 in correct_answers :
-        st.success("Selamat! Jawaban Anda benar.")
-    else:
-        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
-
-
-
-
-
-
-
-    
+       
     if menu == "Indefinite Integral":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
@@ -71,10 +33,36 @@ def check_latihan_answers(answer_1):
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R}$   **sehingga** $(C)\'=0$ </font>', unsafe_allow_html=True)
 
+        
         # Tombol Kuis
         if st.button("Kuis Definisi Integral"):
             run_definisi_quiz()
+        
+        # Pertanyaan 1
+        answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"]) 
+        # Pertanyaan 2
+        answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
 
+        # Pertanyaan 3
+        answer_3 = st.radio("Tentukan primitive dari fungsi $f(x)=0$", ["$F(x)=0$", "$F(x)=C \in \mathbb{R}$", "$F(x)=3x^2$"])
+        # Tombol Kuis
+        if st.button("submit"):
+            check_definisi_answers(answer_1, answer_2, answer_3)
+            
+def check_definisi_answers(answer_1, answer_2, answer_3):
+    # Logika pengecekan jawaban dan memberikan umpan balik
+    correct_answers = {"$F(x)=x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)=0$": "Benar"}
+
+    if answer_1 in correct_answers and answer_2 in correct_answers and answer_3 in correct_answers:
+        st.success("Selamat! Jawaban Anda benar.")
+    else:
+        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
+
+
+
+
+
+    
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
@@ -269,19 +257,9 @@ def check_latihan_answers(answer_1):
 
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/parsial.jpg'
-        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
-        
-        
-        
-        
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)    
                 
-        
-
-
-
-
-        
-    
+            
         # Tombol Kuis
         if st.button("Teknik Integrasi"):
             run_teknik_integrasi_quiz()     
