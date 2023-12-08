@@ -229,9 +229,54 @@ def main():
             ''')
 
         # URL raw dari gambar di repositori GitHub
-        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/SUBSTITUSI.jpg'
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/parsial.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
-
+        
+        st.markdown("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
+        st.latex(r'''
+            \int (2x^3-4x)^{24} (3x^2-2) \,dx
+            ''')
+        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
+        st.write("Misalkan $u=2x^3-4x$, maka $du=(6x^2-4)dx$ atau $\\frac{du}{2}=(3x^2-2)dx$. Sehingga,")
+        st.latex(r''' 
+            \begin{align*}
+            \int (2x^3-4x)^{24} (3x^2-2) \,dx &= \int [u]^{24} \ \frac{du}{2} \\
+            &= \frac{1}{2} \cdot \frac{1}{25} [u]^{25} + C \\
+            &= \frac{1}{50} (2x^3-4x)^{25} + C
+            \end{align*}
+            ''')
+        
+        st.markdown("<font color='blue'>CONTOH 5.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
+        st.latex(r'''
+            \int -3 cos^6(x) \ sin(x) \,dx
+            ''')
+        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
+        st.write("Misalkan $g(x)=cosx$ maka $g' (x)=-sinx$. Sehingga,")
+        st.latex(r''' 
+            \begin{align*}
+            \int (2x^3-4x)^{24} (6x^2-4) \,dx &= \int [g(x)]^{24} \cdot g'(x) \,dx \\
+            &= \frac{1}{25} [g(x)]^{25} + C \\
+            &= \frac{1}{25} (2x^3-4x)^{25} + C
+            \end{align*}
+            ''')
+                
+        st.markdown("<font color='blue'>CONTOH 6.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
+        st.latex(r'''
+            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx
+            ''')
+        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
+        st.write("Misalkan $u=x^2+6x$ maka $du=(2x+6)dx$  atau  $\\frac{du}{2}=(x+3)dx$. Sehingga,")
+        st.latex(r''' 
+            \begin{align*}
+            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx &= \int \frac{1}{\sqrt{u}} \frac{du}{2} \\
+            &= \int [u]^{-1/2} \frac{du}{2} \\
+            &= \frac{1}{2} \cdot 2 \cdot [u]^{1/2} + C \\
+            &= \sqrt{x^2+6x} + C
+            \end{align*}
+            ''')
 
 
 
