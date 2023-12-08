@@ -117,7 +117,6 @@ def main():
    
     elif menu == "Sifat Kelinieran Integral":
         
-
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
@@ -171,7 +170,62 @@ def main():
         # Tombol Kuis
         if st.button("Kuis Sifat Kelinieran Integral"):
             run_sifat_kelinieran_quiz()
-            
+    
+    elif menu == "Teknik Integrasi":
+        
+        # URL raw dari gambar di repositori GitHub
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
+        
+        # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
+        audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
+
+        # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
+        st.audio(audio_file_path, format='audio/mp3', start_time=0)
+        st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.latex(r'''
+            \begin{align*}
+            \int (6x^5 - 2x) \,dx &= \int 6x^5 \,dx - \int 2x \,dx \\
+            &= 6\int x^5 \,dx - 2\int x \,dx \\
+            &= 6\left(\frac{1}{6} x^6 + C_1\right) - 2\left(\frac{1}{2} x^2 + C_2\right) \\
+            &= x^6 + 6C_1 - x^2 - 2C_2 \\
+            &= x^6 - x^2 + C
+            \end{align*}
+        ''')
+        
+        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.latex(r'''
+            \begin{align*}
+            \int \left(\frac{1}{t^3} - 2\sqrt{t} + 4t^3 - 1\right) \,dt 
+            &= \int \frac{1}{t^3} \,dt - 2\int t^{1/2} \,dt + 4\int t^3 \,dt - \int 1 \,dt \\
+            &= \frac{1}{(-2)t^2}+C_1 - 2 \cdot \frac{2}{3} t^{3/2} +C_2 + 4 \cdot \frac{1}{4} t^4 - t + C_3 \\
+            &= -\frac{1}{2t^2} - \frac{4}{3} t\sqrt{t} + t^4 - t + C
+            \end{align*}
+        ''')
+        st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
+        st.latex(r'''
+            \begin{align*}
+            \int (3y-4x)^2 \,dx &= \int (9y^2 - 2 \cdot 3y \cdot 4x + 16x^2) \,dx \\
+            &= 9y^2 \int 1 \,dx - 24y \int x \,dx + 16 \int x^2 \,dx \\
+            &= 9y^2x + C_1 - 12yx^2 + C_2 + \frac{16}{3}x^3 + C_3 \\
+            &= 9y^2x - 12yx^2 + \frac{16}{3}x^3 + C
+            \end{align*}
+         ''')
+        st.write("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
+        st.latex(r'''
+            \begin{align*}
+            \int (5a+1)(2-3a) \,da &= \int (10a - 15a^2 + 2 - 3a) \,da \\
+            &= \int (-15a^2 + 7a + 2) \,da \\
+            &= -15\int a^2 \,da + 7\int a \,da + 2\int 1 \,da \\
+            &= -15 \cdot \frac{1}{3}a^3 +C_1 + 7 \cdot \frac{1}{2}a^2 +C_2 + 2a + C_3 \\
+            &= -5a^3 + \frac{7}{2}a^2 + 2a + C
+            \end{align*}
+
+         ''')
+    
+        # Tombol Kuis
+        if st.button("Kuis Sifat Kelinieran Integral"):
+            run_sifat_kelinieran_quiz()        
 def run_definisi_quiz():
     # Pertanyaan 1
     answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
