@@ -36,7 +36,21 @@ def main():
         if st.button("Kuis Definisi Integral"):
             run_definisi_quiz()
               
-       
+def run_definisi_quiz():
+    # Pertanyaan 1
+    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
+
+    # Pertanyaan 2
+    answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^3$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
+
+    # Pertanyaan 3
+    answer_3 = st.radio("Tentukan primitive dari fungsi $f(x)=0$", ["$F(x)=0$", "$F(x)=C \in \mathbb{R}$", "$F(x)=3x^2$"])
+
+    # Tombol Submit
+    submitted = st.button("Submit")
+
+    if submitted:
+        check_definisi_answers(answer_1, answer_2, answer_3)
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
@@ -254,21 +268,7 @@ def main():
         if st.button("Teknik Integrasi"):
             run_teknik_Integrasi_quiz()
 
-def run_definisi_quiz():
-    # Pertanyaan 1
-    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
 
-    # Pertanyaan 2
-    answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^3$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
-
-    # Pertanyaan 3
-    answer_3 = st.radio("Tentukan primitive dari fungsi $f(x)=0$", ["$F(x)=0$", "$F(x)=C \in \mathbb{R}$", "$F(x)=3x^2$"])
-
-    # Tombol Submit
-    submitted = st.button("Submit")
-
-    if submitted:
-        check_definisi_answers(answer_1, answer_2, answer_3)
 
 
 def run_rumus_dasar_quiz():
