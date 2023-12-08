@@ -197,15 +197,22 @@ def main():
             \end{align*}
             ''')
         
-        st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.markdown("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
         st.latex(r'''
+            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx
+            ''')
+        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
+        st.write("Misalkan $u=x^2+6x$ maka $du=(2x+6)dx$  atau  $\\frac{du}{2}=(x+3)dx$. Sehingga,")
+        st.latex(r''' 
             \begin{align*}
-            \int \left(\frac{1}{t^3} - 2\sqrt{t} + 4t^3 - 1\right) \,dt 
-            &= \int \frac{1}{t^3} \,dt - 2\int t^{1/2} \,dt + 4\int t^3 \,dt - \int 1 \,dt \\
-            &= \frac{1}{(-2)t^2}+C_1 - 2 \cdot \frac{2}{3} t^{3/2} +C_2 + 4 \cdot \frac{1}{4} t^4 - t + C_3 \\
-            &= -\frac{1}{2t^2} - \frac{4}{3} t\sqrt{t} + t^4 - t + C
+            \int (2x^3-4x)^{24} (3x^2-2) \,dx &= \int [u]^{24} \ \frac{du}{2} \\
+            &= \frac{1}{2} \cdot \frac{1}{25} [u]^{25} + C \\
+            &= \frac{1}{50} (2x^3-4x)^{25} + C
             \end{align*}
-        ''')
+            ''')
+        
+        
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.latex(r'''
             \begin{align*}
