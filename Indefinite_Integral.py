@@ -3,7 +3,7 @@ import streamlit as st
 def main():
     # Menu di sidebar
     menu = st.sidebar.radio("INTEGRAL", ["Indefinite Integral", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi", "latihan"])
-
+    if menu == "LATIHAN":
     if menu == "Indefinite Integral":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
@@ -353,6 +353,6 @@ def check_integral_trigonometri_answers(answer_10, answer_11, answer_12):
 
 
 
-    if menu == "Indefinite Integral":
+
 if __name__ == '__main__':
     main()
