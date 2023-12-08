@@ -200,6 +200,21 @@ def main():
         st.markdown("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
         st.write("Hitunglah!")
         st.latex(r'''
+            \int -3 cos^6(x) \ sin(x) \,dx
+            ''')
+        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
+        st.write("Misalkan $g(x)=cosx$ maka $g' (x)=-sinx$. Sehingga,")
+        st.latex(r''' 
+            \begin{align*}
+            \int (2x^3-4x)^{24} (6x^2-4) \,dx &= \int [g(x)]^{24} \cdot g'(x) \,dx \\
+            &= \frac{1}{25} [g(x)]^{25} + C \\
+            &= \frac{1}{25} (2x^3-4x)^{25} + C
+            \end{align*}
+            ''')
+                
+        st.markdown("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
+        st.latex(r'''
             \int \frac{x+3}{\sqrt{x^2+6x}} \,dx
             ''')
         st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
@@ -212,16 +227,7 @@ def main():
             &= \sqrt{x^2+6x} + C
             \end{align*}
             ''')
-                
-        st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
-        st.latex(r'''
-            \begin{align*}
-            \int (3y-4x)^2 \,dx &= \int (9y^2 - 2 \cdot 3y \cdot 4x + 16x^2) \,dx \\
-            &= 9y^2 \int 1 \,dx - 24y \int x \,dx + 16 \int x^2 \,dx \\
-            &= 9y^2x + C_1 - 12yx^2 + C_2 + \frac{16}{3}x^3 + C_3 \\
-            &= 9y^2x - 12yx^2 + \frac{16}{3}x^3 + C
-            \end{align*}
-         ''')
+        
         st.write("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
         st.latex(r'''
             \begin{align*}
