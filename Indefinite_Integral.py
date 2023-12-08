@@ -189,7 +189,14 @@ def main():
             ''')
         st.write("Jawab:")
         st.write("Misalkan $u=2x^3-4x$, maka $du=(6x^2-4)dx$ atau $\\frac{du}{2}=(3x^2-2)dx$. Sehingga,")
-          
+        st.latex(r''' 
+            \begin{align*}
+            \int (2x^3-4x)^{24} (3x^2-2) \,dx &= \int [u]^{24} \frac{du}{2} \\
+            &= \frac{1}{2} \cdot \frac{1}{25} [u]^{25} + C \\
+            &= \frac{1}{50} (2x^3-4x)^{25} + C
+            \end{align*}
+            ''')
+        
         st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
         st.latex(r'''
             \begin{align*}
