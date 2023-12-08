@@ -227,22 +227,13 @@ def main():
             &= \sqrt{x^2+6x} + C
             \end{align*}
             ''')
-        
-        st.write("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
-        st.latex(r'''
-            \begin{align*}
-            \int (5a+1)(2-3a) \,da &= \int (10a - 15a^2 + 2 - 3a) \,da \\
-            &= \int (-15a^2 + 7a + 2) \,da \\
-            &= -15\int a^2 \,da + 7\int a \,da + 2\int 1 \,da \\
-            &= -15 \cdot \frac{1}{3}a^3 +C_1 + 7 \cdot \frac{1}{2}a^2 +C_2 + 2a + C_3 \\
-            &= -5a^3 + \frac{7}{2}a^2 + 2a + C
-            \end{align*}
-
-         ''')
+                      
     
         # Tombol Kuis
-        if st.button("Kuis Sifat Kelinieran Integral"):
-            run_sifat_kelinieran_quiz()        
+        if st.button("Teknik Integrasi"):
+            run_teknik_integrasi_quiz()     
+
+
 def run_definisi_quiz():
     # Pertanyaan 1
     answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
