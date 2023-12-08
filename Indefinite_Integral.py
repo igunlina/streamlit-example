@@ -235,17 +235,16 @@ def main():
         st.markdown("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
         st.write("Hitunglah!")
         st.latex(r'''
-            \int (2x^3-4x)^{24} (3x^2-2) \,dx
+            \int 2x(3x+2)^3 \,dx
             ''')
         st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $u=2x^3-4x$, maka $du=(6x^2-4)dx$ atau $\\frac{du}{2}=(3x^2-2)dx$. Sehingga,")
+        st.write("Misalkan $u=2x$, maka $du=2dx$ atau $dv = (3x+2)^3 \,dx$  Sehingga, $v = \frac{1}{3 \cdot 4} (3x+2)^4 = \frac{1}{12} (3x+2)^4$. Akibatnya, ")
         st.latex(r''' 
             \begin{align*}
-            \int (2x^3-4x)^{24} (3x^2-2) \,dx &= \int [u]^{24} \ \frac{du}{2} \\
-            &= \frac{1}{2} \cdot \frac{1}{25} [u]^{25} + C \\
-            &= \frac{1}{50} (2x^3-4x)^{25} + C
+            \int 2x(3x+2)^3 \,dx &= 2x \cdot \frac{1}{12} (3x+2)^4 - \int \frac{1}{12} (3x+2)^4 \cdot 2 \,dx \\
+            &= \frac{x}{6} (3x+2)^4 - \frac{1}{6} \cdot \frac{1}{3} \cdot \frac{1}{5} (3x+2)^4 + C \\
+            &= \frac{x}{6} (3x+2)^4 - \frac{1}{90} (3x+2)^4 + C
             \end{align*}
-            ''')
         
         st.markdown("<font color='blue'>CONTOH 5.</font>", unsafe_allow_html=True)
         st.write("Hitunglah!")
