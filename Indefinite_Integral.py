@@ -227,7 +227,16 @@ def main():
             &= \sqrt{x^2+6x} + C
             \end{align*}
             ''')
-                      
+
+        # URL raw dari gambar di repositori GitHub
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/SUBSTITUSI.jpg'
+        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
+
+
+
+
+
+        
     
         # Tombol Kuis
         if st.button("Teknik Integrasi"):
