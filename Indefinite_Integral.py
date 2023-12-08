@@ -206,13 +206,13 @@ def main():
         st.write("Misalkan $u=x^2+6x$ maka $du=(2x+6)dx$  atau  $\\frac{du}{2}=(x+3)dx$. Sehingga,")
         st.latex(r''' 
             \begin{align*}
-            \int (2x^3-4x)^{24} (3x^2-2) \,dx &= \int [u]^{24} \ \frac{du}{2} \\
-            &= \frac{1}{2} \cdot \frac{1}{25} [u]^{25} + C \\
-            &= \frac{1}{50} (2x^3-4x)^{25} + C
+            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx &= \int \frac{1}{\sqrt{u}} \frac{du}{2} \\
+            &= \int [u]^{-1/2} \frac{du}{2} \\
+            &= \frac{1}{2} \cdot 2 \cdot [u]^{1/2} + C \\
+            &= \sqrt{x^2+6x} + C
             \end{align*}
             ''')
-        
-        
+                
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.latex(r'''
             \begin{align*}
