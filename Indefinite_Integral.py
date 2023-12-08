@@ -188,7 +188,7 @@ def main():
             \int (2x^3-4x)^{24} (3x^2-2) \,dx
             ''')
         st.write("Jawab:")
-        st.markdown(r'''
+        st.latex(r'''
             Misalkan \(u=2x^3-4x\), maka \(du=(6x^2-4)dx\) atau \(\frac{du}{2}=(3x^2-2)dx\). Sehingga,
             ''')
 
