@@ -184,15 +184,13 @@ def main():
         # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
         st.audio(audio_file_path, format='audio/mp3', start_time=0)
         st.write("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
+        st.write("Hitunglah!")
         st.latex(r'''
-            \begin{align*}
-            \int (6x^5 - 2x) \,dx &= \int 6x^5 \,dx - \int 2x \,dx \\
-            &= 6\int x^5 \,dx - 2\int x \,dx \\
-            &= 6\left(\frac{1}{6} x^6 + C_1\right) - 2\left(\frac{1}{2} x^2 + C_2\right) \\
-            &= x^6 + 6C_1 - x^2 - 2C_2 \\
-            &= x^6 - x^2 + C
-            \end{align*}
+            \int (2x^3-4x)^{24} (3x^2-2) \,dx
         ''')
+        st.write("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
+        st.write("Misalkan $u=2x^3-4x$ maka $du=(6x^2-4)dx$ atau $\\frac{du}{2}=(3x^2-2)dx$, sehingga,")
+
         
         st.write("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
         st.latex(r'''
@@ -224,7 +222,7 @@ def main():
 
          ''')
         # URL raw dari gambar di repositori GitHub
-        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/SUBSTITUSI.jpg'
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/parsial.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
         
         # Tombol Kuis
