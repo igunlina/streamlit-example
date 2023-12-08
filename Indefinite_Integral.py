@@ -1,6 +1,3 @@
-08 December 2023
-16:07
-
 import streamlit as st
 
 def main():
