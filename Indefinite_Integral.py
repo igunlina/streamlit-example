@@ -373,7 +373,7 @@ def check_sifat_kelinieran_answers(answer_10, answer_11, answer_12):
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
 
-def check_teknik_integrasi_answers(answer_13 answer_14, answer_15):
+ def check_teknik_integrasi_answers(answer_13 answer_14, answer_15):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
 
