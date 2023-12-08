@@ -36,34 +36,6 @@ def main():
         if st.button("Kuis Definisi Integral"):
             run_definisi_quiz()
               
-def run_definisi_quiz():
-    # Pertanyaan 1
-    answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
-
-    # Pertanyaan 2
-    answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^3$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
-
-    # Pertanyaan 3
-    answer_3 = st.radio("Tentukan primitive dari fungsi $f(x)=0$", ["$F(x)=0$", "$F(x)=C \in \mathbb{R}$", "$F(x)=3x^2$"])
-
-    # Tombol Submit
-    submitted = st.button("Submit")
-
-    if submitted:
-        check_definisi_answers(answer_1, answer_2, answer_3)
-    
-    elif menu == "Review Turunan":
-        st.subheader("Review Turunan")
-
-        # Menambahkan video dari YouTube
-        youtube_video_url_review = 'https://www.youtube.com/watch?v=XdiA9E5HC4I'  # Ganti dengan URL video YouTube Anda
-        st.video(youtube_video_url_review)
-
-        st.write("Sebelum mempelajari integral, mari kita review materi turunan agar mempelajari integral jadi lebih mudah.")
-
-        st.write("Silahkan simak video pembelajaran turunan di atas dengan baik")
-
-        st.write("Selamat menyimak!")
 
     elif menu == "Rumus Dasar Integral":
         st.subheader("Indefinite Integral")
