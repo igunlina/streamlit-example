@@ -217,24 +217,19 @@ def main():
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.write("Hitunglah!")
         st.latex(r'''
-            \begin{align*}
-            \int (3y-4x)^2 \,dx &= \int (9y^2 - 2 \cdot 3y \cdot 4x + 16x^2) \,dx \\
-            &= 9y^2 \int 1 \,dx - 24y \int x \,dx + 16 \int x^2 \,dx \\
-            &= 9y^2x + C_1 - 12yx^2 + C_2 + \frac{16}{3}x^3 + C_3 \\
-            &= 9y^2x - 12yx^2 + \frac{16}{3}x^3 + C
-            \end{align*}
+            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx
          ''')
-        st.write("<font color='blue'>CONTOH 4.</font>", unsafe_allow_html=True)
+
+        st.write("Misalkan $u=x^2+6x $ maka $du=(2x+6)dx$, atau  $ \\frac{du}{2}=(x+3)dx$, sehingga")
         st.latex(r'''
             \begin{align*}
-            \int (5a+1)(2-3a) \,da &= \int (10a - 15a^2 + 2 - 3a) \,da \\
-            &= \int (-15a^2 + 7a + 2) \,da \\
-            &= -15\int a^2 \,da + 7\int a \,da + 2\int 1 \,da \\
-            &= -15 \cdot \frac{1}{3}a^3 +C_1 + 7 \cdot \frac{1}{2}a^2 +C_2 + 2a + C_3 \\
-            &= -5a^3 + \frac{7}{2}a^2 + 2a + C
+            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx &= \int \frac{1}{\sqrt{u}} \frac{du}{2} \\
+            &= \int [u]^{-1/2} \frac{du}{2} \\
+            &= \frac{1}{2} \cdot 2 \cdot [u]^{1/2} + C \\
+            &= \sqrt{x^2+6x} + C
             \end{align*}
-
-         ''')
+            ''')
+       
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/parsial.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
