@@ -10,7 +10,7 @@ def main():
         
         answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"]) 
         # Tombol Kuis
-        if st.button("latihan"):
+        if st.button("submit"):
             check_latihan_answers(answer_1)
             #run_latihan_quiz()
 
