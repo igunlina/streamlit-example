@@ -2,9 +2,8 @@ import streamlit as st
 
 def main():
     # Menu di sidebar
-    menu = st.sidebar.radio("INTEGRAL", ["Indefinite Integral", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi", "latihan"])
-   
-       
+    menu = st.sidebar.radio("INTEGRAL", ["Indefinite Integral", "Review Turunan", "Definisi", "Rumus Dasar Integral", "Integral Trigonometri", "Sifat Kelinieran Integral", "Teknik Integrasi"])
+
     if menu == "Indefinite Integral":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
@@ -33,31 +32,10 @@ def main():
         st.write("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
         st.markdown('<font color="red">**Fungsi** $f(x)=0$ **memiliki primitive** $F(x)=C \in \mathbb{R}$   **sehingga** $(C)\'=0$ </font>', unsafe_allow_html=True)
 
-        
         # Tombol Kuis
         if st.button("Kuis Definisi Integral"):
             run_definisi_quiz()
-        
-        # Pertanyaan 1
-        answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"]) 
-        # Pertanyaan 2
-        answer_2 = st.radio("Tentukan primitive dari fungsi $f(x)=x^2$", ["$F(x)= \\frac{1}{3} x^3$", "$F(x)=2x$", "$F(x)=\\frac{1}{2} x^2$"])
 
-        # Pertanyaan 3
-        answer_3 = st.radio("Tentukan primitive dari fungsi $f(x)=0$", ["$F(x)=0$", "$F(x)=C \in \mathbb{R}$", "$F(x)=3x^2$"])
-        # Tombol Kuis
-        if st.button("submit"):
-            check_definisi_answers(answer_1, answer_2, answer_3)
-            
-def check_definisi_answers(answer_1, answer_2, answer_3):
-    # Logika pengecekan jawaban dan memberikan umpan balik
-    correct_answers = {"$F(x)=x^2$": "Benar", "$F(x)= \\frac{1}{3} x^3$": "Benar", "$F(x)=0$": "Benar"}
-
-    if answer_1 in correct_answers and answer_2 in correct_answers and answer_3 in correct_answers:
-        st.success("Selamat! Jawaban Anda benar.")
-    else:
-        st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
-    
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
@@ -139,6 +117,7 @@ def check_definisi_answers(answer_1, answer_2, answer_3):
    
     elif menu == "Sifat Kelinieran Integral":
         
+
         # URL raw dari gambar di repositori GitHub
         github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
@@ -192,74 +171,7 @@ def check_definisi_answers(answer_1, answer_2, answer_3):
         # Tombol Kuis
         if st.button("Kuis Sifat Kelinieran Integral"):
             run_sifat_kelinieran_quiz()
-    
-    elif menu == "Teknik Integrasi":
-        # URL raw dari gambar di repositori GitHub
-        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/SUBSTITUSI.jpg'
-        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)
-
-        # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
-        audio_file_path = 'children-logo-116101.mp3'  # Ganti dengan path file audio Anda
-
-        # Memasukkan tag audio menggunakan st.audio tanpa perlu menambahkan tag HTML manual
-        st.audio(audio_file_path, format='audio/mp3', start_time=0)
-
-        st.markdown("<font color='blue'>CONTOH 1.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int (2x^3-4x)^{24} (3x^2-2) \,dx
-            ''')
-        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $u=2x^3-4x$, maka $du=(6x^2-4)dx$ atau $\\frac{du}{2}=(3x^2-2)dx$. Sehingga,")
-        st.latex(r''' 
-            \begin{align*}
-            \int (2x^3-4x)^{24} (3x^2-2) \,dx &= \int [u]^{24} \ \frac{du}{2} \\
-            &= \frac{1}{2} \cdot \frac{1}{25} [u]^{25} + C \\
-            &= \frac{1}{50} (2x^3-4x)^{25} + C
-            \end{align*}
-            ''')
-        
-        st.markdown("<font color='blue'>CONTOH 2.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int -3 cos^6(x) \ sin(x) \,dx
-            ''')
-        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $g(x)=cosx$ maka $g' (x)=-sinx$. Sehingga,")
-        st.latex(r''' 
-            \begin{align*}
-            \int (2x^3-4x)^{24} (6x^2-4) \,dx &= \int [g(x)]^{24} \cdot g'(x) \,dx \\
-            &= \frac{1}{25} [g(x)]^{25} + C \\
-            &= \frac{1}{25} (2x^3-4x)^{25} + C
-            \end{align*}
-            ''')
-                
-        st.markdown("<font color='blue'>CONTOH 3.</font>", unsafe_allow_html=True)
-        st.write("Hitunglah!")
-        st.latex(r'''
-            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx
-            ''')
-        st.markdown("<font color='red'>Jawab.</font>", unsafe_allow_html=True)
-        st.write("Misalkan $u=x^2+6x$ maka $du=(2x+6)dx$  atau  $\\frac{du}{2}=(x+3)dx$. Sehingga,")
-        st.latex(r''' 
-            \begin{align*}
-            \int \frac{x+3}{\sqrt{x^2+6x}} \,dx &= \int \frac{1}{\sqrt{u}} \frac{du}{2} \\
-            &= \int [u]^{-1/2} \frac{du}{2} \\
-            &= \frac{1}{2} \cdot 2 \cdot [u]^{1/2} + C \\
-            &= \sqrt{x^2+6x} + C
-            \end{align*}
-            ''')
-
-        # URL raw dari gambar di repositori GitHub
-        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/parsial.jpg'
-        st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)    
-                
             
-        # Tombol Kuis
-        if st.button("Teknik Integrasi"):
-            run_teknik_integrasi_quiz()     
-
-
 def run_definisi_quiz():
     # Pertanyaan 1
     answer_1 = st.radio("Tentukan primitive dari fungsi $f(x)=2x$", ["$F(x)=x^2$", "$F(x)=2x^2$", "$F(x)=4$"])
@@ -312,13 +224,13 @@ def run_integral_trigonometri_quiz():
 
 def run_sifat_kelinieran_quiz():
     # Pertanyaan 10
-    answer_10 = st.radio(" $\int_{}^{}{(3y^2 -2y+a)}dy $", ["$y^3-y^2+ay+C$", "$y^2-2y^2+a+C$", "$3y^3-y^2+ay+C$"])
+    answer_4 = st.radio(" $\int_{}^{}{5} da = $", ["$5a +C$", "$5x+C$", "$5ax+C$"])
 
     # Pertanyaan 11
-    answer_11 = st.radio(" $\int_{}^{}{(sin \\theta - cos \\alpha)} d \\alpha$" , ["$ \\alpha sin \\theta - sin \\alpha + C $", "$ cos \\theta - sin \\alpha + C $", "$ cos \\alpha - sin \\alpha + C $"])
+    answer_5 = st.radio(" $\int_{}^{}{m^3}dm=$", ["$\\frac{1}{4} m^4 +C $", "$\\frac{1}{3} m^3 +C $", "$\\frac{1}{4} x^4 +C$"])
 
     # Pertanyaan 12
-    answer_12 = st.radio(" $ \int_{}^{}{(2a-b)^2}db $", ["$4a^2b-2ab^2+ \\frac{1}{3} b^3+C$", "$4a^2b-2ab^2- \\frac{1}{3} b^3+C $", "$4a^2b-ab^2+ \\frac{1}{3} b^3+C$"])
+    answer_6 = st.radio(" $\int_{}^{}{ \\frac{1}{x^2} dx=}$", ["$- \\frac{1}{x} +C$", "$- \\frac{2}{x} +C$", "$- \\frac{1}{x^2} +C$"])
 
     # Tombol Submit
     submitted = st.button("Submit")
@@ -354,7 +266,7 @@ def check_rumus_dasar_answers(answer_7, answer_8, answer_9):
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
         
-def check_integral_trigonometri_answers(answer_10, answer_11, answer_12):
+def check_rumus_dasar_answers(answer_10, answer_11, answer_12):
     # Logika pengecekan jawaban dan memberikan umpan balik
     correct_answers = {"$sin \phi + C$": "Benar", "$- sec t + C$": "Benar", "$ysinx+C$": "Benar"}
 
@@ -362,9 +274,6 @@ def check_integral_trigonometri_answers(answer_10, answer_11, answer_12):
         st.success("Selamat! Jawaban Anda benar.")
     else:
         st.error("Mohon maaf, jawaban Anda salah. Silahkan diulangi kembali.")
-
-
-
-
+        
 if __name__ == '__main__':
     main()
