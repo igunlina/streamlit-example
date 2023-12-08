@@ -51,6 +51,7 @@ def run_definisi_quiz():
 
     if submitted:
         check_definisi_answers(answer_1, answer_2, answer_3)
+    
     elif menu == "Review Turunan":
         st.subheader("Review Turunan")
 
