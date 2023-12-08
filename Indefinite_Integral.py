@@ -174,7 +174,7 @@ def main():
     elif menu == "Teknik Integrasi":
         st.subheader("TEKNIK INTEGRASI")
         # URL raw dari gambar di repositori GitHub
-        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/Sifat%20kelinieran%20integral.jpg'
+        github_image_url = 'https://raw.githubusercontent.com/igunlina/streamlit-example/master/SUBSTITUSI.jpg'
         st.image(github_image_url, caption='Semoga ilmunya bermanfaat', use_column_width=True)   
         
         # Menambahkan audio dari path lokal (pastikan mengonversi backslashes menjadi double backslashes atau gunakan forward slashes)
