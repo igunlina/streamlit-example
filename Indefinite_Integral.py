@@ -252,7 +252,7 @@ def main():
                 
         # Tombol Kuis
         if st.button("Teknik Integrasi"):
-            run_teknik_Integrasi_quiz()
+            run_teknik_integrasi_quiz()
 
 def run_definisi_quiz():
     # Pertanyaan 1
