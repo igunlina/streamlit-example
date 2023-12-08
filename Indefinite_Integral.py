@@ -224,13 +224,13 @@ def run_integral_trigonometri_quiz():
 
 def run_sifat_kelinieran_quiz():
     # Pertanyaan 10
-    answer_4 = st.radio(" $\int_{}^{}{(3y^2 -2y+a)}dy $", ["$y^3-y^2+ay+C$", "$y^2-2y^2+a+C$", "$3y^3-y^2+ay+C$"])
+    answer_10 = st.radio(" $\int_{}^{}{(3y^2 -2y+a)}dy $", ["$y^3-y^2+ay+C$", "$y^2-2y^2+a+C$", "$3y^3-y^2+ay+C$"])
 
     # Pertanyaan 11
-    answer_5 = st.radio(" $\int_{}^{}{sin \theta \ -cos \alpha } \ d \alpha $", ["$ \alpha \ sin \theta \ -sin \alpha +C $", "$ cos \theta \ -sin \alpha +C  $", "$ cos \alpha \ -sin \alpha+C $"])
+     answer_5 = st.radio(r"$\int_{a}^{b} (\sin \theta - \cos \alpha) \,d\alpha$", ["$ \alpha \sin \theta - \sin \alpha + C $", "$ \cos \theta - \sin \alpha + C $", "$ \cos \alpha - \sin \alpha + C $"])
 
     # Pertanyaan 12
-    answer_6 = st.radio(" $ \int_{}^{}{(2a-b)^2}db $", ["$4a^2b-2ab^2+ \\frac{1}{3} b^3+C$", "$4a^2b-2ab^2- \\frac{1}{3} b^3+C $", "$4a^2b-ab^2+ \\frac{1}{3} b^3+C$"])
+    answer_12 = st.radio(" $ \int_{}^{}{(2a-b)^2}db $", ["$4a^2b-2ab^2+ \\frac{1}{3} b^3+C$", "$4a^2b-2ab^2- \\frac{1}{3} b^3+C $", "$4a^2b-ab^2+ \\frac{1}{3} b^3+C$"])
 
     # Tombol Submit
     submitted = st.button("Submit")
