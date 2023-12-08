@@ -7,7 +7,7 @@ def main():
     if menu == "latihan":
         st.title('BISMILLAH')
         st.header('MARI BELAJAR INTEGRAL TAK TENTU (INDEFINITE INTEGRAL/PRIMITIVE\ANTIDERIVATIVE)')
-
+        answer_1= True 
         # Tombol Kuis
         if st.button("latihan"):
             check_latihan_answers(answer_1)
